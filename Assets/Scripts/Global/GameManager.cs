@@ -10,12 +10,16 @@ public class GameManager : MonoBehaviour
     public event Action OnStageClear;
     public event Action OnStageOver;
 
-    // 제한 시간
+    // Time Limit
     public float limitTime = 120.0f;
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+            instance = this;
+        else Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
@@ -29,13 +33,13 @@ public class GameManager : MonoBehaviour
     {
         limitTime -= Time.deltaTime;
 
-        // 제한 시간 초과 시
+        // Reached Time Limit
         if(limitTime <= 0)
         {
             OnStageOver?.Invoke();
         }
     }
 
-    // TODO : 스테이지 해금 및 클리어
-    // TODO : 자원 관리
+    // TODO : Stage Unlock
+    // TODO : Skill point Manage.
 }
