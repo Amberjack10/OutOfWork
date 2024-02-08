@@ -1,0 +1,1088 @@
+fileFormatVersion: 2
+guid: f5c34e714bd1f8a42b6c305e018604a4
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: small monster_Frame_0
+    originalName: 
+    pivot: {x: 0.5384617, y: -2.3666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 281
+      width: 13
+      height: 30
+    spriteID: 9c3ef5cc9c1d84a479801f87b1f5e409
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 281}
+  - name: small monster_Frame_1
+    originalName: 
+    pivot: {x: 0.75, y: -2.3666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 205
+      width: 24
+      height: 30
+    spriteID: f79fd6b921628b440baa2f9439c78865
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 205}
+  - name: small monster_Frame_2
+    originalName: 
+    pivot: {x: 0.75, y: -2.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 86
+      width: 24
+      height: 32
+    spriteID: f22e60092d950e64cad12ff8d8b84d02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 86}
+  - name: small monster_Frame_3
+    originalName: 
+    pivot: {x: 0.75, y: -2.1515152}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 402
+      width: 24
+      height: 33
+    spriteID: 4a0f43c66414a524195eb786eea134cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 402}
+  - name: small monster_Frame_4
+    originalName: 
+    pivot: {x: 0.71999997, y: -2.0285714}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 230
+      width: 25
+      height: 35
+    spriteID: 46ad4e82e830c21468cae9904dfbdecf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 230}
+  - name: small monster_Frame_5
+    originalName: 
+    pivot: {x: 0.71999997, y: -1.9722222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 186
+      width: 25
+      height: 36
+    spriteID: cf6bd29bbe143874992293b7f806fed9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 186}
+  - name: small monster_Frame_6
+    originalName: 
+    pivot: {x: 0.71999997, y: -1.9189187}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 51
+      width: 25
+      height: 37
+    spriteID: 5c4cf34701a4f554e9170ac39e68bd09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 51}
+  - name: small monster_Frame_7
+    originalName: 
+    pivot: {x: 0.75, y: -2.2903225}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 166
+      width: 24
+      height: 31
+    spriteID: 2b5902c2ffcabb04a8de701c81fcd373
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 166}
+  - name: small monster_Frame_8
+    originalName: 
+    pivot: {x: 0.75, y: -2.1515152}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 443
+      width: 24
+      height: 33
+    spriteID: 3350d334f9f9f62408fff3ce661fb300
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 443}
+  - name: small monster_Frame_9
+    originalName: 
+    pivot: {x: 0.71999997, y: -2.0882354}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 360
+      width: 25
+      height: 34
+    spriteID: abcaa174556658940a85daa26dd0d6ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 360}
+  - name: small monster_Frame_10
+    originalName: 
+    pivot: {x: 0.6923077, y: -2.1515152}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 4
+      width: 26
+      height: 33
+    spriteID: 8ceab2f01f5068a4dbf534dbf6aaac87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 4}
+  - name: small monster_Frame_11
+    originalName: 
+    pivot: {x: 0.6923077, y: -1.868421}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 459
+      width: 26
+      height: 38
+    spriteID: 66a6b67c2abb74748a5100a00d429885
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 459}
+  - name: small monster_Frame_12
+    originalName: 
+    pivot: {x: 0.71999997, y: -1.8205129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 4
+      width: 25
+      height: 39
+    spriteID: b570df3ec5570854c91193cd2856d703
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 4}
+  - name: small monster_Frame_13
+    originalName: 
+    pivot: {x: 0.75, y: -2.3666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 243
+      width: 24
+      height: 30
+    spriteID: 0b39921011f3ab3458ffc6d781cfb1c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 243}
+  - name: small monster_Frame_14
+    originalName: 
+    pivot: {x: 0.75, y: -2.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 126
+      width: 24
+      height: 32
+    spriteID: ce08538340280d34da171fe5e4c6a949
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 126}
+  - name: small monster_Frame_15
+    originalName: 
+    pivot: {x: 0.75, y: -2.1515152}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 131
+      y: 45
+      width: 24
+      height: 33
+    spriteID: 7c538403e4e0b9f4e816be6429575dcc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 131, y: 45}
+  - name: small monster_Frame_16
+    originalName: 
+    pivot: {x: 0.6, y: -2.0285714}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 416
+      width: 30
+      height: 35
+    spriteID: a7b7e70adda734549a07b3671376be83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 416}
+  - name: small monster_Frame_17
+    originalName: 
+    pivot: {x: 0.71999997, y: -2.0285714}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 273
+      width: 25
+      height: 35
+    spriteID: 3b07cc9f3fbdd3b458482aa32a9f8d92
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 273}
+  - name: small monster_Frame_18
+    originalName: 
+    pivot: {x: 0.75, y: -1.9722222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 316
+      width: 24
+      height: 36
+    spriteID: 2a1a7747f2b9a7e43a9c56d5b51c6903
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 316}
+  - name: small monster_Frame_19
+    originalName: 
+    pivot: {x: 0.25714287, y: -1.9189187}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 285
+      width: 70
+      height: 37
+    spriteID: b829dd3295b9a4f47b451072f4d2333b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 285}
+  - name: small monster_Frame_20
+    originalName: 
+    pivot: {x: 0.24, y: -1.868421}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 239
+      width: 75
+      height: 38
+    spriteID: 9d17dd04c1630f54a88ff868f4a46857
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 239}
+  - name: small monster_Frame_21
+    originalName: 
+    pivot: {x: 0.21686746, y: -1.8205129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 192
+      width: 83
+      height: 39
+    spriteID: ab8b880aeb4b9184e8439bdf919c3457
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 192}
+  - name: small monster_Frame_22
+    originalName: 
+    pivot: {x: 0.21428573, y: -1.8205129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 145
+      width: 84
+      height: 39
+    spriteID: 6a4d8c921dd330a4c9c77827d35e5582
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 145}
+  - name: small monster_Frame_23
+    originalName: 
+    pivot: {x: 0.20930234, y: -1.8205129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 86
+      height: 39
+    spriteID: 125c4a2182076994ab788acaacd4f6ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: small monster_Frame_24
+    originalName: 
+    pivot: {x: 0.21176472, y: -1.8205129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 51
+      width: 85
+      height: 39
+    spriteID: e6390910baa04e2458b567565bd79f52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 51}
+  - name: small monster_Frame_25
+    originalName: 
+    pivot: {x: 0.21176472, y: -1.8205129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 98
+      width: 85
+      height: 39
+    spriteID: c8310bec4d922f44d9ef092223f4190f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 98}
+  - name: small monster_Frame_26
+    originalName: 
+    pivot: {x: 0.71999997, y: -1.9189187}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 96
+      width: 25
+      height: 37
+    spriteID: 21157a0aecfedfd42ab53a1e47ecdb8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 96}
+  - name: small monster_Frame_27
+    originalName: 
+    pivot: {x: 0.71999997, y: -1.9189187}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
+      y: 141
+      width: 25
+      height: 37
+    spriteID: 000e85c6733b01948a81846b6158bc62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 98, y: 141}
+  - name: small monster_Frame_28
+    originalName: 
+    pivot: {x: 0.51428574, y: -2.0285714}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 373
+      width: 35
+      height: 35
+    spriteID: 67ec9dac8cdeb374e958045efac65e00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 373}
+  - name: small monster_Frame_29
+    originalName: 
+    pivot: {x: 0.4736842, y: -2.0285714}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 373
+      width: 38
+      height: 35
+    spriteID: d8c6d780fa9ec514ab78d2be2fc478c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 373}
+  - name: small monster_Frame_30
+    originalName: 
+    pivot: {x: 0.4615385, y: -2.057143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 330
+      width: 39
+      height: 35
+    spriteID: 33aaee16315eb644b91931696891d438
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 330}
+  - name: small monster_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: -2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 416
+      width: 36
+      height: 36
+    spriteID: de5892c8ba93bb8468cdfa605f7b153b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 416}
+  - name: small monster_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: -2.0857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 460
+      width: 36
+      height: 35
+    spriteID: d6a91bcce2f2dd041be66fc290cf1379
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 460}
+  - name: small monster_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: -2.0857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 51
+      y: 330
+      width: 36
+      height: 35
+    spriteID: 55dc95c2539bf904d87c5d9f68848ab4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 51, y: 330}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 387557315
+    name: small monster
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: small monster_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 89
+        y: 71
+        width: 13
+        height: 30
+      spriteId: 9c3ef5cc9c1d84a479801f87b1f5e409
+    - name: small monster_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 30
+      spriteId: f79fd6b921628b440baa2f9439c78865
+    - name: small monster_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 32
+      spriteId: f22e60092d950e64cad12ff8d8b84d02
+    - name: small monster_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 33
+      spriteId: 4a0f43c66414a524195eb786eea134cd
+    - name: small monster_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 35
+      spriteId: 46ad4e82e830c21468cae9904dfbdecf
+    - name: small monster_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 36
+      spriteId: cf6bd29bbe143874992293b7f806fed9
+    - name: small monster_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 37
+      spriteId: 5c4cf34701a4f554e9170ac39e68bd09
+    - name: small monster_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 31
+      spriteId: 2b5902c2ffcabb04a8de701c81fcd373
+    - name: small monster_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 33
+      spriteId: 3350d334f9f9f62408fff3ce661fb300
+    - name: small monster_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 34
+      spriteId: abcaa174556658940a85daa26dd0d6ef
+    - name: small monster_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 78
+        y: 71
+        width: 26
+        height: 33
+      spriteId: 8ceab2f01f5068a4dbf534dbf6aaac87
+    - name: small monster_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 78
+        y: 71
+        width: 26
+        height: 38
+      spriteId: 66a6b67c2abb74748a5100a00d429885
+    - name: small monster_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 39
+      spriteId: b570df3ec5570854c91193cd2856d703
+    - name: small monster_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 30
+      spriteId: 0b39921011f3ab3458ffc6d781cfb1c7
+    - name: small monster_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 32
+      spriteId: ce08538340280d34da171fe5e4c6a949
+    - name: small monster_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 33
+      spriteId: 7c538403e4e0b9f4e816be6429575dcc
+    - name: small monster_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 78
+        y: 71
+        width: 30
+        height: 35
+      spriteId: a7b7e70adda734549a07b3671376be83
+    - name: small monster_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 35
+      spriteId: 3b07cc9f3fbdd3b458482aa32a9f8d92
+    - name: small monster_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 78
+        y: 71
+        width: 24
+        height: 36
+      spriteId: 2a1a7747f2b9a7e43a9c56d5b51c6903
+    - name: small monster_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 78
+        y: 71
+        width: 70
+        height: 37
+      spriteId: b829dd3295b9a4f47b451072f4d2333b
+    - name: small monster_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 78
+        y: 71
+        width: 75
+        height: 38
+      spriteId: 9d17dd04c1630f54a88ff868f4a46857
+    - name: small monster_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 78
+        y: 71
+        width: 83
+        height: 39
+      spriteId: ab8b880aeb4b9184e8439bdf919c3457
+    - name: small monster_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 78
+        y: 71
+        width: 84
+        height: 39
+      spriteId: 6a4d8c921dd330a4c9c77827d35e5582
+    - name: small monster_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 78
+        y: 71
+        width: 86
+        height: 39
+      spriteId: 125c4a2182076994ab788acaacd4f6ae
+    - name: small monster_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 78
+        y: 71
+        width: 85
+        height: 39
+      spriteId: e6390910baa04e2458b567565bd79f52
+    - name: small monster_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 78
+        y: 71
+        width: 85
+        height: 39
+      spriteId: c8310bec4d922f44d9ef092223f4190f
+    - name: small monster_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 37
+      spriteId: 21157a0aecfedfd42ab53a1e47ecdb8f
+    - name: small monster_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 78
+        y: 71
+        width: 25
+        height: 37
+      spriteId: 000e85c6733b01948a81846b6158bc62
+    - name: small monster_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 78
+        y: 71
+        width: 35
+        height: 35
+      spriteId: 67ec9dac8cdeb374e958045efac65e00
+    - name: small monster_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 78
+        y: 71
+        width: 38
+        height: 35
+      spriteId: d8c6d780fa9ec514ab78d2be2fc478c1
+    - name: small monster_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 78
+        y: 72
+        width: 39
+        height: 35
+      spriteId: 33aaee16315eb644b91931696891d438
+    - name: small monster_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 78
+        y: 72
+        width: 36
+        height: 36
+      spriteId: de5892c8ba93bb8468cdfa605f7b153b
+    - name: small monster_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 78
+        y: 73
+        width: 36
+        height: 35
+      spriteId: d6a91bcce2f2dd041be66fc290cf1379
+    - name: small monster_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 78
+        y: 73
+        width: 36
+        height: 35
+      spriteId: 55dc95c2539bf904d87c5d9f68848ab4
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 192}

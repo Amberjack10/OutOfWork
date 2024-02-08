@@ -1,0 +1,1228 @@
+fileFormatVersion: 2
+guid: 97eb1e2d28c8a4d40883d6f2ea827a9b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Ancient Laser Dude_Frame_0
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 145
+      height: 48
+    spriteID: 69cc07a1812c4ed489c814e885a069f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Ancient Laser Dude_Frame_1
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 60
+      width: 145
+      height: 48
+    spriteID: 7ead08dff48c11d4da1742dbfdd3de7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 60}
+  - name: Ancient Laser Dude_Frame_2
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 116
+      width: 145
+      height: 48
+    spriteID: d55019a7848beb648b29ac59d9d7ee9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 116}
+  - name: Ancient Laser Dude_Frame_3
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 172
+      width: 145
+      height: 48
+    spriteID: d9d510ffca46399458190a06546f080b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 172}
+  - name: Ancient Laser Dude_Frame_4
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 228
+      width: 145
+      height: 48
+    spriteID: 69362962b259a9b4783873b697be45d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 228}
+  - name: Ancient Laser Dude_Frame_5
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 284
+      width: 145
+      height: 48
+    spriteID: 36e813516fec37f4f83b2d6757081205
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 284}
+  - name: Ancient Laser Dude_Frame_6
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 340
+      width: 145
+      height: 48
+    spriteID: c84eeea742ccd52439c11823ffb05e29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 340}
+  - name: Ancient Laser Dude_Frame_7
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 396
+      width: 145
+      height: 48
+    spriteID: 177099e68e4a01140866c7674ceee103
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 396}
+  - name: Ancient Laser Dude_Frame_8
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 452
+      width: 145
+      height: 48
+    spriteID: 0c56a1a20009faf4896d13a7d2ae2575
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 452}
+  - name: Ancient Laser Dude_Frame_9
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 508
+      width: 145
+      height: 48
+    spriteID: 2805bd3cdb3fbe448a553d9a041de7df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 508}
+  - name: Ancient Laser Dude_Frame_10
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 564
+      width: 145
+      height: 48
+    spriteID: 0fc57556eb910fe42b4bcdc2fb065201
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 564}
+  - name: Ancient Laser Dude_Frame_11
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 620
+      width: 145
+      height: 48
+    spriteID: b0274898b748f3e41acdab910031105e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 620}
+  - name: Ancient Laser Dude_Frame_12
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 676
+      width: 145
+      height: 48
+    spriteID: a0f6600b5bd35754f91bffc063091d44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 676}
+  - name: Ancient Laser Dude_Frame_13
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 732
+      width: 145
+      height: 48
+    spriteID: 9fc878f6ece09fe4a92576ccb80ed3f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 732}
+  - name: Ancient Laser Dude_Frame_14
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 788
+      width: 145
+      height: 48
+    spriteID: e3dcf0ac16a9d56488d52633d99ab2c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 788}
+  - name: Ancient Laser Dude_Frame_15
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 844
+      width: 145
+      height: 48
+    spriteID: e27a7e179b00f86428d6c05797027437
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 844}
+  - name: Ancient Laser Dude_Frame_16
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 900
+      width: 145
+      height: 48
+    spriteID: 409b8e71f311e8e4f97b9547851083a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 900}
+  - name: Ancient Laser Dude_Frame_17
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 956
+      width: 145
+      height: 48
+    spriteID: 0ee62d4a0ff005349b202465635d7c09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 956}
+  - name: Ancient Laser Dude_Frame_18
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 4
+      width: 145
+      height: 48
+    spriteID: 65fcab9ead425b4448a4fb8bb6bcb9ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 4}
+  - name: Ancient Laser Dude_Frame_19
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 60
+      width: 145
+      height: 48
+    spriteID: 7d741f1c34afcc8478354a33a2043206
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 60}
+  - name: Ancient Laser Dude_Frame_20
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 116
+      width: 145
+      height: 48
+    spriteID: 84c114068cbec9744869b68d0999227d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 116}
+  - name: Ancient Laser Dude_Frame_21
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 172
+      width: 145
+      height: 48
+    spriteID: 195f0c48b65c2c849bd6324ee4ce0f52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 172}
+  - name: Ancient Laser Dude_Frame_22
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 228
+      width: 145
+      height: 48
+    spriteID: 2360cbff69fbac748915eb46b27e2dab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 228}
+  - name: Ancient Laser Dude_Frame_23
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 284
+      width: 145
+      height: 48
+    spriteID: 1aa988a51d3c930458116592baf1d7d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 284}
+  - name: Ancient Laser Dude_Frame_24
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 340
+      width: 145
+      height: 48
+    spriteID: f97870a4e16b5d3439c4ebf0574e381e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 340}
+  - name: Ancient Laser Dude_Frame_25
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 396
+      width: 145
+      height: 48
+    spriteID: 8fc7cd317f7ba664a8f39b68a1f1a395
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 396}
+  - name: Ancient Laser Dude_Frame_26
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 452
+      width: 145
+      height: 48
+    spriteID: 1b8f1ad8336eae844a5ef2c2ce9545de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 452}
+  - name: Ancient Laser Dude_Frame_27
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 508
+      width: 145
+      height: 48
+    spriteID: ad1770c1fdad2ef4bb925dc0ba1bff47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 508}
+  - name: Ancient Laser Dude_Frame_28
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 564
+      width: 145
+      height: 48
+    spriteID: 2d010cccfd4258c42bfbdde2754b4267
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 564}
+  - name: Ancient Laser Dude_Frame_29
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 620
+      width: 145
+      height: 48
+    spriteID: 5f7b6f054e24545468f257cd0ed3e485
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 620}
+  - name: Ancient Laser Dude_Frame_30
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 676
+      width: 145
+      height: 48
+    spriteID: eb7478b2073065d4193597f48bad0d0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 676}
+  - name: Ancient Laser Dude_Frame_31
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 732
+      width: 145
+      height: 48
+    spriteID: ee6c1a3815c611346b2c343d8ef2cb23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 732}
+  - name: Ancient Laser Dude_Frame_32
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 788
+      width: 145
+      height: 48
+    spriteID: 8905e38200008ab4d9f36ec9e6f2aa92
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 788}
+  - name: Ancient Laser Dude_Frame_33
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 844
+      width: 145
+      height: 48
+    spriteID: ca1b30f2b41d172499a5db6e39de7a03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 844}
+  - name: Ancient Laser Dude_Frame_34
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 900
+      width: 145
+      height: 48
+    spriteID: fdf79003cfb504e4eacee3064d82b4c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 900}
+  - name: Ancient Laser Dude_Frame_35
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 956
+      width: 145
+      height: 48
+    spriteID: 55e80e11b35068c46bb56da80c1b2c15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 956}
+  - name: Ancient Laser Dude_Frame_36
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 4
+      width: 145
+      height: 48
+    spriteID: 59a73c72ccefec24094d2d974fcadf02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 4}
+  - name: Ancient Laser Dude_Frame_37
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 60
+      width: 145
+      height: 48
+    spriteID: 051374b2f5167244492e9b6a52f4ecbb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 60}
+  - name: Ancient Laser Dude_Frame_38
+    originalName: 
+    pivot: {x: 0.4413793, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 116
+      width: 145
+      height: 48
+    spriteID: c137205c92329b04b9c4ec71598b013b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 116}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -2032370825
+    name: Ancient Laser Dude
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ancient Laser Dude_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 69cc07a1812c4ed489c814e885a069f9
+    - name: Ancient Laser Dude_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 7ead08dff48c11d4da1742dbfdd3de7e
+    - name: Ancient Laser Dude_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: d55019a7848beb648b29ac59d9d7ee9b
+    - name: Ancient Laser Dude_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: d9d510ffca46399458190a06546f080b
+    - name: Ancient Laser Dude_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 69362962b259a9b4783873b697be45d4
+    - name: Ancient Laser Dude_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 36e813516fec37f4f83b2d6757081205
+    - name: Ancient Laser Dude_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: c84eeea742ccd52439c11823ffb05e29
+    - name: Ancient Laser Dude_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 177099e68e4a01140866c7674ceee103
+    - name: Ancient Laser Dude_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 0c56a1a20009faf4896d13a7d2ae2575
+    - name: Ancient Laser Dude_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 2805bd3cdb3fbe448a553d9a041de7df
+    - name: Ancient Laser Dude_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 0fc57556eb910fe42b4bcdc2fb065201
+    - name: Ancient Laser Dude_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: b0274898b748f3e41acdab910031105e
+    - name: Ancient Laser Dude_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: a0f6600b5bd35754f91bffc063091d44
+    - name: Ancient Laser Dude_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 9fc878f6ece09fe4a92576ccb80ed3f8
+    - name: Ancient Laser Dude_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: e3dcf0ac16a9d56488d52633d99ab2c0
+    - name: Ancient Laser Dude_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: e27a7e179b00f86428d6c05797027437
+    - name: Ancient Laser Dude_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 409b8e71f311e8e4f97b9547851083a9
+    - name: Ancient Laser Dude_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 0ee62d4a0ff005349b202465635d7c09
+    - name: Ancient Laser Dude_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 65fcab9ead425b4448a4fb8bb6bcb9ad
+    - name: Ancient Laser Dude_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 7d741f1c34afcc8478354a33a2043206
+    - name: Ancient Laser Dude_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 84c114068cbec9744869b68d0999227d
+    - name: Ancient Laser Dude_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 195f0c48b65c2c849bd6324ee4ce0f52
+    - name: Ancient Laser Dude_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 2360cbff69fbac748915eb46b27e2dab
+    - name: Ancient Laser Dude_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 1aa988a51d3c930458116592baf1d7d6
+    - name: Ancient Laser Dude_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: f97870a4e16b5d3439c4ebf0574e381e
+    - name: Ancient Laser Dude_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 8fc7cd317f7ba664a8f39b68a1f1a395
+    - name: Ancient Laser Dude_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 1b8f1ad8336eae844a5ef2c2ce9545de
+    - name: Ancient Laser Dude_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: ad1770c1fdad2ef4bb925dc0ba1bff47
+    - name: Ancient Laser Dude_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 2d010cccfd4258c42bfbdde2754b4267
+    - name: Ancient Laser Dude_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 5f7b6f054e24545468f257cd0ed3e485
+    - name: Ancient Laser Dude_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: eb7478b2073065d4193597f48bad0d0c
+    - name: Ancient Laser Dude_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: ee6c1a3815c611346b2c343d8ef2cb23
+    - name: Ancient Laser Dude_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 8905e38200008ab4d9f36ec9e6f2aa92
+    - name: Ancient Laser Dude_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: ca1b30f2b41d172499a5db6e39de7a03
+    - name: Ancient Laser Dude_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: fdf79003cfb504e4eacee3064d82b4c0
+    - name: Ancient Laser Dude_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 55e80e11b35068c46bb56da80c1b2c15
+    - name: Ancient Laser Dude_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 59a73c72ccefec24094d2d974fcadf02
+    - name: Ancient Laser Dude_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: 051374b2f5167244492e9b6a52f4ecbb
+    - name: Ancient Laser Dude_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 0
+        y: 0
+        width: 145
+        height: 48
+      spriteId: c137205c92329b04b9c4ec71598b013b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 48}
