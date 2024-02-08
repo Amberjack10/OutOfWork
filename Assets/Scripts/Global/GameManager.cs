@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public event Action OnStageOver;
 
     // 제한 시간
-    public float limitTime = 60.0f;
+    public float limitTime = 120.0f;
 
     private void Awake()
     {
