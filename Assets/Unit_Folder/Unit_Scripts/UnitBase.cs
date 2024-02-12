@@ -8,20 +8,22 @@ public enum UnitState
 {
     Idle,
     Walking,
-    Attacking
+    Attacking,
+    Dead
 }
 
-public class UnitBase : MonoBehaviour
+public class UnitBase : MonoBehaviour, IDamageable
 {
     protected static readonly int IsWalking = Animator.StringToHash("IsWalking");
     protected static readonly int Attack = Animator.StringToHash("Attack");
     protected static readonly int Dead = Animator.StringToHash("Dead");
 
-    protected string opponentTag;
-    [SerializeField]protected bool isPlayerUnit;
-    [SerializeField]protected bool foundEnemy = false;
+    [HideInInspector]public string opponentTag;
+    protected bool isPlayerUnit;
+    protected bool foundEnemy = false;
+    [HideInInspector] protected bool isDead = false;
 
-    private Vector2 moveDirection;
+    [HideInInspector]public Vector2 moveDirection;
     private Rigidbody2D _rigidbody;
 
     protected Animator animator;
@@ -36,37 +38,19 @@ public class UnitBase : MonoBehaviour
     public float attackRate;
     private bool canAttack = true;
 
-    private CircleCollider2D attackRange;
-
     protected void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-    }
 
-    protected void Start()
-    {
         SetState(UnitState.Idle);
-        attackRange = transform.Find("AttackRange").GetComponent<CircleCollider2D>();
         SetOppoenet();
+        SetDitrection();
     }
 
-    protected void Update()
-    {
-        switch (state)
-        {
-            case UnitState.Idle:
-                UpdatePassive();
-                break;
-            case UnitState.Walking:
-                UpdateWalking();
-                break;
-            case UnitState.Attacking:
-                UpdateAttacking();
-                break;
-        }
-    }
+    //--------------------------------------------------------------------------------------------------------------------------------------------------
+    //Setting Function
 
     private void SetOppoenet()
     {
@@ -82,6 +66,74 @@ public class UnitBase : MonoBehaviour
         }
     }
 
+    public void SetDitrection()
+    {
+        if (!isPlayerUnit)
+        {
+            gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y);
+            moveDirection = Vector2.left;
+        }
+        else
+        {
+            gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x, gameObject.transform.localScale.y);
+            moveDirection = Vector2.right;
+        }
+    }
+
+    protected void SetState(UnitState newState)
+    {
+        state = newState;
+
+        switch (state)
+        {
+            case UnitState.Idle:
+                _rigidbody.velocity = Vector2.zero;
+                animator.SetBool(IsWalking, false);
+                break;
+            case UnitState.Walking:
+                animator.SetBool(IsWalking, true);
+                break;
+            case UnitState.Attacking:
+                _rigidbody.velocity = Vector2.zero;
+                animator.SetBool(IsWalking, false);
+                break;
+            case UnitState.Dead:
+                _rigidbody.velocity = Vector2.zero;
+                animator.SetBool(IsWalking, false);
+                break;
+        }
+    }
+
+    //--------------------------------------------------------------------------------------------------------------------------------------------------
+
+    protected void Start()
+    {
+        
+    }
+
+    //--------------------------------------------------------------------------------------------------------------------------------------------------
+    //Update Function
+
+    protected void Update()
+    {
+        switch (state)
+        {
+            case UnitState.Idle:
+                UpdatePassive();
+                break;
+            case UnitState.Walking:
+                UpdateWalking();
+                break;
+            case UnitState.Attacking:
+                UpdateAttacking();
+                break;
+            case UnitState.Dead:
+                StartCoroutine("Die");
+                break;
+        }
+    }
+
+
     private void UpdateAttacking()
     {
         if (foundEnemy)
@@ -95,7 +147,18 @@ public class UnitBase : MonoBehaviour
         }
         else
         {
-            SetState(UnitState.Idle);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("attack"))
+            {
+                float animTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+                if(animTime == 0 || animTime > 1f)
+                {
+                    SetState(UnitState.Idle);
+                }
+            }
+            else
+            {
+                SetState(UnitState.Idle);
+            }
         }
     }
 
@@ -128,40 +191,13 @@ public class UnitBase : MonoBehaviour
         }
     }
 
+    //--------------------------------------------------------------------------------------------------------------------------------------------------
+    //Acting Function
+
     public void Move_Unit()
     {
-        if(!isPlayerUnit)
-        {
-            moveDirection = Vector2.left;
-            sprite.flipX = true;
-        }
-        else
-        {
-            moveDirection = Vector2.right;
-            sprite.flipX = false;
-        }
 
         _rigidbody.velocity = moveDirection * walkSpeed;
-    }
-
-    protected void SetState(UnitState newState)
-    {
-        state = newState;
-
-        switch (state)
-        {
-            case UnitState.Idle:
-                _rigidbody.velocity = Vector2.zero;
-                animator.SetBool(IsWalking, false);
-                break;
-            case UnitState.Walking:
-                animator.SetBool(IsWalking, true);
-                break;
-            case UnitState.Attacking:
-                _rigidbody.velocity = Vector2.zero;
-                animator.SetBool(IsWalking, false);
-                break;
-        }
     }
 
     public void TakeDamage(int damage)
@@ -169,18 +205,31 @@ public class UnitBase : MonoBehaviour
         health = health - damage;
         if(health <= 0)
         {
-            Die();
+            SetState(UnitState.Dead);
         }
     }
 
-    private void Die()
+    IEnumerator Die()
     {
+        isDead = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+        animator.SetTrigger(Dead);
+
+        while(animator.IsInTransition(0) == false)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
         Destroy(gameObject);
     }
 
+    //--------------------------------------------------------------------------------------------------------------------------------------------------
+    //Collision
+
     protected void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag(opponentTag))
+        if (collision.CompareTag(opponentTag) && !collision.GetComponent<UnitBase>().isDead)
         {
             foundEnemy = true;
         }
@@ -194,16 +243,4 @@ public class UnitBase : MonoBehaviour
         }
     }
 
-    protected void OnHit()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(attackRange.transform.position, attackRange.radius, 0);
-
-        foreach(Collider2D collider in colliders)
-        {
-            if (collider.CompareTag(opponentTag))
-            {
-                collider.GetComponent<UnitBase>().TakeDamage(attack);
-            }
-        }
-    }
 }
