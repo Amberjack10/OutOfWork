@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene-KSM.unity
     guid: 5e4655c4486832d4e9ec980a018c0257
   - enabled: 1
-    path: Assets/Scenes/StageScene.unity
+    path: Assets/Scenes/StageScene-KSM.unity
     guid: fd6c19fab08877d47ab2bf933f5f75cf
   m_configObjects: {}
