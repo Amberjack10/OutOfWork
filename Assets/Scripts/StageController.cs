@@ -19,9 +19,10 @@ public class StageController : MonoBehaviour
         // Subscribe Player's Attack Event
         // OnElevatorAttack += OnTakeDamage;
 
-        stage = StageManager.instance.currentStage;
+        //stage = StageManager.instance.currentStage;
         StartRegenPlayerUnitCost();
-        InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
+        //InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
+        InvokeRepeating("MakeMonsters", 0, 3f);
     }
 
     // Update is called once per frame
@@ -59,18 +60,6 @@ public class StageController : MonoBehaviour
     {
         // TODO : Generate Monsters
         Debug.Log("MakingMonsters");
-        
-    }
-
-    private void OnTakeDamage(int _damage)
-    {
-        stage.TakeDamage(_damage);
-
-        // When ElevatorHp gets lower then 0
-        if (stage.ElevatorHp <= 0)
-        {
-            // Stage Clear
-            StageManager.instance.StageClear();
-        }
+        GameObject monsterUnit = Instantiate(Resources.Load("EnemyUnit/Director_Robot Variant")) as GameObject;
     }
 }

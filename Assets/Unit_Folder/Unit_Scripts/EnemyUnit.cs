@@ -16,7 +16,7 @@ public class EnemyUnit : UnitBase
         }
         else
         {
-            if (transform.position.x > StopPosition.position.x)
+            if (transform.position.x > StageManager.instance.EnemyStopPosition.position.x)
             {
                 SetState(UnitState.Walking);
             }
@@ -33,7 +33,7 @@ public class EnemyUnit : UnitBase
         }
         else
         {
-            if (transform.position.x <= StopPosition.position.x)
+            if (transform.position.x <= StageManager.instance.EnemyStopPosition.position.x)
             {
                 SetState(UnitState.Idle);
             }
