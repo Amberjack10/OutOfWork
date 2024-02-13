@@ -176,10 +176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f2c43d5c8fa4646b2345a56b77ad2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  amount: 0
+  type: 1
   isUnlocked: 0
-  prevTree: {fileID: 0}
+  amount: 15
+  price: 30
+  prevTree: {fileID: 571620939}
 --- !u!114 &204024090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 204024091}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 204024089}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: CanOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &204024091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,9 +464,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  amount: 0
   isUnlocked: 0
-  prevTree: {fileID: 0}
+  amount: 5
+  price: 30
+  prevTree: {fileID: 1716766925}
 --- !u!114 &425036039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +511,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 425036040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 425036038}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: CanOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &425036040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,10 +615,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f2c43d5c8fa4646b2345a56b77ad2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  amount: 0
+  type: 1
   isUnlocked: 0
-  prevTree: {fileID: 0}
+  amount: 2
+  price: 10
+  prevTree: {fileID: 1584610170}
 --- !u!114 &571620940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,7 +663,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571620941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 571620939}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: CanOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571620941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,6 +1092,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016147221}
   m_CullTransparentMesh: 1
+--- !u!1 &1072765468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1072765470}
+  - component: {fileID: 1072765469}
+  m_Layer: 0
+  m_Name: SkillManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1072765469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072765468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14a3a8484529a444ae2e4f6b5e60a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolTime: 15
+  atk: 3
+  atkSphere: 1
+  skill: {fileID: 0}
+--- !u!4 &1072765470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072765468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1080.9398, y: 373.8965, z: -8.091123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360906684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,10 +1193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f2c43d5c8fa4646b2345a56b77ad2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  amount: 0
+  type: 2
   isUnlocked: 0
-  prevTree: {fileID: 0}
+  amount: 0
+  price: 50
+  prevTree: {fileID: 571620939}
 --- !u!114 &1360906687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,7 +1241,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1360906688}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360906686}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: CanOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1360906688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,8 +1563,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  amount: 0
   isUnlocked: 1
+  amount: 0
+  price: 0
   prevTree: {fileID: 0}
 --- !u!1 &1595967939
 GameObject:
@@ -1723,9 +1824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  amount: 0
   isUnlocked: 0
-  prevTree: {fileID: 0}
+  amount: 5
+  price: 10
+  prevTree: {fileID: 1584610170}
 --- !u!114 &1716766926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,7 +1871,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1716766927}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1716766925}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: CanOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1716766927
 MonoBehaviour:
   m_ObjectHideFlags: 0

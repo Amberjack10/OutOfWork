@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillTree : MonoBehaviour
 {
@@ -11,10 +12,11 @@ public class SkillTree : MonoBehaviour
         increaseAtkSphere
     }
 
-    public SkillType type;
-    public int amount;
+    public SkillType type;    
     public bool isUnlocked = false;
-    public SkillTree prevTree;
+    [SerializeField] private int amount;
+    [SerializeField] private int price;
+    [SerializeField] private SkillTree prevTree;
 
     public void CanOpen()
     {
@@ -29,7 +31,7 @@ public class SkillTree : MonoBehaviour
         }
     }
 
-    public void UnLock()
+    private void UnLock()
     {
         switch((int)type)
         {
@@ -44,6 +46,7 @@ public class SkillTree : MonoBehaviour
                 break;
         }
 
+        //SkillPoint »©±â
         isUnlocked = true;
     }
 }

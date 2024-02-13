@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkillManager : MonoBehaviour
 {
-    public int coolTime = 10;
+    public int coolTime = 15;
     public int atk = 3;
     public int atkSphere = 1;
 
