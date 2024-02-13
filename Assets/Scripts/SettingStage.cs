@@ -15,6 +15,7 @@ public class SettingStage : MonoBehaviour
 
         stage = StageManager.instance.currentStage;
         InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
+        //StageManager.instance.StartRegenPlayerUnitCost();
     }
 
     // Update is called once per frame

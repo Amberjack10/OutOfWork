@@ -57,10 +57,13 @@ public class StageManager : MonoBehaviour
     public Stage[] stages;
     public Stage currentStage;
 
-    public GameObject stage;
-
     public event Action OnStageClear;
     public event Action OnStageOver;
+
+    // Player's In-game Unit Cost. Uses to Generate Unit.
+    public int playerUnitCost = 0;
+    public int maxPlayerUnitCost = 10;
+    public float playerUnitCostRate = 2f;
 
     public static StageManager instance;
 
@@ -82,12 +85,30 @@ public class StageManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void StageSelect(int stageNum)
     {
         currentStage = new Stage(stageNum);
+        StartRegenPlayerUnitCost();
+    }
+
+    // Generate Units.
+    public void OnUnitSelectButton(int index)
+    {
+        // if(playerUnitCost >= UnitCost) Instantiate(Unit);
+    }
+
+    public void StartRegenPlayerUnitCost()
+    {
+        InvokeRepeating("RegenPlayerUnitCost", 0, playerUnitCostRate);
+    }
+
+    public void RegenPlayerUnitCost()
+    {
+        if (playerUnitCost >= maxPlayerUnitCost) return;
+        playerUnitCost++;
     }
 
     public void StageClear()
