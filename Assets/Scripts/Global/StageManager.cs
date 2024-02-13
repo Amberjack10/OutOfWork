@@ -94,12 +94,6 @@ public class StageManager : MonoBehaviour
         StartRegenPlayerUnitCost();
     }
 
-    // Generate Units.
-    public void OnUnitSelectButton(int index)
-    {
-        // if(playerUnitCost >= UnitCost) Instantiate(Unit);
-    }
-
     public void StartRegenPlayerUnitCost()
     {
         InvokeRepeating("RegenPlayerUnitCost", 0, playerUnitCostRate);
@@ -109,6 +103,12 @@ public class StageManager : MonoBehaviour
     {
         if (playerUnitCost >= maxPlayerUnitCost) return;
         playerUnitCost++;
+    }
+
+    // Generate Units.
+    public void OnUnitSelectButton(int index)
+    {
+        // if(playerUnitCost >= UnitCost) Instantiate(Unit);
     }
 
     public void StageClear()
