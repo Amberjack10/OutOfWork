@@ -31,23 +31,33 @@ public class Stage
         Name = "Stage" + stageNumber.ToString();
         Level = stageNumber;
 
-        if (stageNumber == 0)
+        switch (stageNumber)
         {
-            ElevatorHp = 100;
-            generateMonsterRate = 5f;
-            Reward = 3;
-        }
-        else if (stageNumber == 1)
-        {
-            ElevatorHp = 150;
-            generateMonsterRate = 4f;
-            Reward = 5;
-        }
-        else
-        {
-            ElevatorHp = 200;
-            generateMonsterRate = 3f;
-            Reward = 10;
+            case 5:
+                ElevatorHp = 100;
+                generateMonsterRate = 5f;
+                Reward = 3;
+                break;
+            case 4:
+                ElevatorHp = 150;
+                generateMonsterRate = 4.5f;
+                Reward = 4;
+                break;
+            case 3:
+                ElevatorHp = 200;
+                generateMonsterRate = 4f;
+                Reward = 5;
+                break;
+            case 2:
+                ElevatorHp = 250;
+                generateMonsterRate = 3.5f;
+                Reward = 7;
+                break;
+            case 1:
+                ElevatorHp = 300;
+                generateMonsterRate = 3f;
+                Reward = 10;
+                break;
         }
     }
 }
