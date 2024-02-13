@@ -6,9 +6,7 @@ using UnityEngine.Events;
 
 public class SkillManager : MonoBehaviour
 {
-    private bool isMoving = false;
-
-    public int coolTime = 15;
+    public float coolTime = 15.0f;
     public int atk = 3;
     public int atkSphere = 1;
 
@@ -33,7 +31,6 @@ public class SkillManager : MonoBehaviour
                 skills.RemoveAt(i);
                 continue;
             }
-            //if (i >= skills.Count) continue;
             skills[i].transform.position += new Vector3(10f * Time.deltaTime, 0, 0);
         }
     }

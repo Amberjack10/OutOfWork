@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 133291872}
     - target: {fileID: 5925929850266076545, guid: b7509bb475c9f034696740cd38d3f6ce, type: 3}
       propertyPath: m_text
-      value: "\n\uCFE8\uD0C0\uC784 \uB354 \uAC10\uC18C\n-\n(30)"
+      value: "\n\uCFE8\uD0C0\uC784 \uD06C\uAC8C \uAC10\uC18C\n-\n(30)"
       objectReference: {fileID: 0}
     - target: {fileID: 7750701626009318332, guid: b7509bb475c9f034696740cd38d3f6ce, type: 3}
       propertyPath: m_Pivot.x
@@ -656,8 +656,9 @@ GameObject:
   - component: {fileID: 717950918}
   - component: {fileID: 717950917}
   - component: {fileID: 717950916}
+  - component: {fileID: 717950919}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SkillButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -680,8 +681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 840, y: -403}
+  m_SizeDelta: {x: 160, y: 214.9471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717950916
 MonoBehaviour:
@@ -739,6 +740,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 717950919}
+        m_TargetAssemblyTypeName: SkillButton, Assembly-CSharp
+        m_MethodName: PressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &717950917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,7 +773,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -777,6 +790,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717950914}
   m_CullTransparentMesh: 1
+--- !u!114 &717950919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717950914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db39c61fee6480a40857040d0850d88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img: {fileID: 717950917}
+  btn: {fileID: 717950916}
 --- !u!1001 &773381901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1274,7 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14a3a8484529a444ae2e4f6b5e60a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolTime: 15
+  coolTime: 10
   atk: 3
   atkSphere: 1
   skillPoint: 100
@@ -1967,7 +1994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2601268137988903560, guid: b7509bb475c9f034696740cd38d3f6ce, type: 3}
       propertyPath: amount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2601268137988903560, guid: b7509bb475c9f034696740cd38d3f6ce, type: 3}
       propertyPath: prevTree
