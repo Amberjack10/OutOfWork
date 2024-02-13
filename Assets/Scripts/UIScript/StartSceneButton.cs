@@ -16,7 +16,7 @@ public class StartSceneButton : MonoBehaviour
     }
     public void OnClickStartBtn()
     {
-        SceneManager.LoadScene("StageScene-KSM");
+        LoadingSceneController.LoadScene("StageScene-KSM");
     }
 
     public void ONClickOptionBtn()

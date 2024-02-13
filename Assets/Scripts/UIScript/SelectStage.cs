@@ -51,6 +51,6 @@ public class SelectStage : MonoBehaviour
     public void OnStageSelectButton()
     {
         // TODO : Give the stage to GameManager
-        SceneManager.LoadScene("StartScene-KSM");
+        LoadingSceneController.LoadScene("StartScene-KSM");
     }
 }
