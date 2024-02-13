@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingStage : MonoBehaviour
+public class StageController : MonoBehaviour
 {
     public Stage stage;
     public float timeLimit = 120f;
