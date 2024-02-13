@@ -26,11 +26,14 @@ public class SkillManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(skills.Count);
         for(int i = 0; i < skills.Count; i++)
         {
-            if (skills[i] == null) skills.RemoveAt(i);
-            if (skills.Count == 0) continue; //check out of bounds
+            if (skills[i] == null)
+            {
+                skills.RemoveAt(i);
+                continue;
+            }
+            //if (i >= skills.Count) continue;
             skills[i].transform.position += new Vector3(10f * Time.deltaTime, 0, 0);
         }
     }
