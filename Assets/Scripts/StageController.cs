@@ -19,10 +19,9 @@ public class StageController : MonoBehaviour
         // Subscribe Player's Attack Event
         // OnElevatorAttack += OnTakeDamage;
 
-        //stage = StageManager.instance.currentStage;
+        stage = StageManager.instance.currentStage;
         StartRegenPlayerUnitCost();
-        //InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
-        InvokeRepeating("MakeMonsters", 0, 3f);
+        InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
     }
 
     // Update is called once per frame
@@ -54,6 +53,7 @@ public class StageController : MonoBehaviour
     private void MakeUnits(int index)
     {
         Debug.Log($"Making Unit {index}");
+        GameObject playerUnit = Instantiate(Resources.Load("PlayerUnit/Overnight_Officeman Variant")) as GameObject;
     }
 
     private void MakeMonsters()
