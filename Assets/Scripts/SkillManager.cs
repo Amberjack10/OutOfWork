@@ -26,14 +26,12 @@ public class SkillManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(skills.Count);
         for(int i = 0; i < skills.Count; i++)
         {
+            if (skills[i] == null) skills.RemoveAt(i);
+            if (skills.Count == 0) continue; //check out of bounds
             skills[i].transform.position += new Vector3(10f * Time.deltaTime, 0, 0);
-            if (skills[i].transform.position.x > 10f)
-            {
-                Destroy(skills[i]);
-                skills.RemoveAt(i);
-            }
         }
     }
 
@@ -58,7 +56,7 @@ public class SkillManager : MonoBehaviour
         for(int i = 0; i < atkSphere; i++)
         {
             GameObject go = Instantiate(skillSphere);
-            go.transform.position += new Vector3(0, i, 0);
+            go.transform.position += new Vector3(0, i * 1.2f, 0);
             skills.Add(go);
         }
     }

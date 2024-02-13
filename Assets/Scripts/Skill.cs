@@ -28,4 +28,10 @@ public class Skill : MonoBehaviour
         Vector3 localCameraPos = transform.InverseTransformPoint(mainCamera.transform.position);
         transform.localPosition = localCameraPos - new Vector3(10, 0, -10);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //TODO: Check other collision is Enemy
+        Destroy(gameObject);
+    }
 }
