@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectStage : MonoBehaviour
 {
@@ -38,9 +39,18 @@ public class SelectStage : MonoBehaviour
 
     public void OnclickDownBtn()
     {
-        if(stage < 1)
-            return;
+        if (isClear)
+        {
+            if (stage < 1)
+                return;
 
-        stage--;
+            stage--;
+        }
+    }
+
+    public void OnStageSelectButton()
+    {
+        // TODO : Give the stage to GameManager
+        //SceneManager.LoadScene("GameScene");
     }
 }
