@@ -33,7 +33,7 @@ public class SkillButton : MonoBehaviour
         while (cool > 0f)
         {
             cool -= Time.deltaTime;
-            img.fillAmount = 1f - (cool / maxCool);
+            img.fillAmount = (cool / maxCool);
 
             yield return new WaitForFixedUpdate();
         }

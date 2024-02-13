@@ -48,7 +48,6 @@ public class SkillManager : MonoBehaviour
     public void increaseAtkSphere()
     {
         atkSphere *= 3;
-        //Instantiate prefab skill
     }
 
     public void SkillButton()
@@ -56,7 +55,7 @@ public class SkillManager : MonoBehaviour
         for(int i = 0; i < atkSphere; i++)
         {
             GameObject go = Instantiate(skillSphere);
-            go.transform.position += new Vector3(0, i * 1.2f, 0);
+            go.transform.position += new Vector3(-1.1f * i, 0, 0);
             skills.Add(go);
         }
     }
