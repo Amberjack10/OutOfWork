@@ -8,6 +8,7 @@ public class LoadingSceneController : MonoBehaviour
 {
     static string nextScene;
 
+    [Header("бс Image")]
     [SerializeField] private Image progressBar;
 
     public static void LoadScene(string sceneName)
@@ -48,7 +49,6 @@ public class LoadingSceneController : MonoBehaviour
                 }
             }
         }
-
 
     }
 }

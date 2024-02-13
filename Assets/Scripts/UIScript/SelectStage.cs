@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SelectStage : MonoBehaviour
 {
-
+    [Header("бс Text")]
     [SerializeField] private TextMeshProUGUI stageTxt;
+
+    [Header("бс GameObject")]
+    [SerializeField] private GameObject prefabOptionUI;
     [SerializeField] private GameObject stageLock;
 
-    private int stage = 5;
+    [Header("бс Canvas")]
+    [SerializeField] private Canvas canvas;
 
+    private int stage = 5;
     private bool isClear; // TODO : Check isClear in GameManager
 
+    private GameObject optionUI;
+    
     private void Start()
     {
         stageTxt.text = stage.ToString();
@@ -21,6 +29,10 @@ public class SelectStage : MonoBehaviour
         {
             stageLock.SetActive(false);
         }
+
+        optionUI = Instantiate(prefabOptionUI, canvas.transform);
+        optionUI.SetActive(false);
+
     }
 
     private void Update()
@@ -37,7 +49,7 @@ public class SelectStage : MonoBehaviour
         stage++;
     }
 
-    public void OnclickDownBtn()
+    public void OnclickDownButton()
     {
         if (isClear)
         {
@@ -53,4 +65,11 @@ public class SelectStage : MonoBehaviour
         // TODO : Give the stage to GameManager
         LoadingSceneController.LoadScene("StartScene-KSM");
     }
+
+    public void OnClickOptionButton()
+    {
+        Time.timeScale = 0f;
+        optionUI.SetActive(true);
+    }
+
 }

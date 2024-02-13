@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class StartSceneButton : MonoBehaviour
 {
-    [SerializeField] private GameObject optionUI;
-    [SerializeField] private Canvas UIcanvas;
+    [Header("бс GameObject")]
+    [SerializeField] private GameObject prefabOptionUI;
 
-    private GameObject _optionUI;
+    [Header("бс Canvas")]
+    [SerializeField] private Canvas canvas;
+
+    private GameObject optionUI;
     private void Start()
     {
-        _optionUI = Instantiate(optionUI, UIcanvas.transform);
-        _optionUI.SetActive(false);
+        optionUI = Instantiate(prefabOptionUI, canvas.transform);
+        optionUI.SetActive(false);
     }
     public void OnClickStartBtn()
     {
@@ -22,7 +26,7 @@ public class StartSceneButton : MonoBehaviour
     public void ONClickOptionBtn()
     {
         Time.timeScale = 0f;
-        _optionUI.SetActive(true);
+        optionUI.SetActive(true);
     }
 
     
