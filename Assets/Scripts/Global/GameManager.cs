@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class GameManager : MonoBehaviour
 
     public event Action OnStageClear;
     public event Action OnStageOver;
+    public event Action<int> OnStageSelect;
 
-    // Time Limit
-    public float limitTime = 120.0f;
+    public int selectedStage;
 
     private void Awake()
     {
@@ -31,13 +32,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        limitTime -= Time.deltaTime;
 
-        // Reached Time Limit
-        if(limitTime <= 0)
-        {
-            OnStageOver?.Invoke();
-        }
+    }
+
+    public void OnStageSelectButton(int index)
+    {
+        SceneManager.LoadScene("SSH_Stage");
+        selectedStage = index;
+        OnStageSelect?.Invoke(index);
     }
 
     // TODO : Stage Unlock

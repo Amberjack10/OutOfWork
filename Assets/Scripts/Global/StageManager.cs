@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,6 +24,31 @@ public class Stage
     {
         ElevatorHp -= damage;
     }
+
+    public Stage(int stageNumber)
+    {
+        Name = "Stage" + stageNumber.ToString();
+        Level = stageNumber;
+
+        if (stageNumber == 0)
+        {
+            ElevatorHp = 100;
+            generateMonsterRate = 5f;
+            Reward = 3;
+        }
+        else if (stageNumber == 1)
+        {
+            ElevatorHp = 150;
+            generateMonsterRate = 4f;
+            Reward = 5;
+        }
+        else
+        {
+            ElevatorHp = 200;
+            generateMonsterRate = 3f;
+            Reward = 10;
+        }
+    }
 }
 
 public class StageManager : MonoBehaviour
@@ -30,7 +56,10 @@ public class StageManager : MonoBehaviour
     public Stage[] stages;
     public Stage currentStage;
 
+    public GameObject stage;
+
     public event Action OnStageClear;
+    public event Action OnStageOver;
 
     public static StageManager instance;
 
@@ -46,8 +75,7 @@ public class StageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Subscribe Player's Attack Event
-        // OnElevatorAttack += OnTakeDamage;
+        GameManager.instance.OnStageSelect += StageSelect;
     }
 
     // Update is called once per frame
@@ -56,32 +84,25 @@ public class StageManager : MonoBehaviour
 
     }
 
-    public void OnStageSelectButton(int index)
+    private void MakeStage()
     {
-        currentStage = stages[index];
+        //Instantiate(stage);
+    }
+
+    private void StageSelect(int stageNum)
+    {
+        currentStage = new Stage(stageNum);
         MakeStage();
     }
 
-    private void MakeStage()
+    public void StageClear()
     {
-        InvokeRepeating("MakeMonsters", 0f, currentStage.generateMonsterRate);
+        OnStageClear?.Invoke();
     }
 
-    private void MakeMonsters()
+    public void StageOver()
     {
-        // TODO : Instantiate(generate monsters);
-    }
-
-    private void OnTakeDamage(int _damage)
-    {
-        currentStage.TakeDamage(_damage);
-
-        // When ElevatorHp gets lower then 0
-        if(currentStage.ElevatorHp <= 0)
-        {
-            // Stage Clear
-            OnStageClear?.Invoke();
-        }
+        OnStageOver?.Invoke();
     }
 
     // TODO : Making Stage, Stage Fail
