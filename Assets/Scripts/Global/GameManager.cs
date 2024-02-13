@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void OnStageSelectButton(int index)
+    public void StageSelect(int index)
     {
         // If Selected Stage is locked
         if (index > stageCleared) return;
