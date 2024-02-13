@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,14 +17,14 @@ public class SkillTree : MonoBehaviour
     public bool isUnlocked = false;
     [SerializeField] private int amount;
     [SerializeField] private int price;
+    [SerializeField] TextMeshProUGUI priceTxt;
     [SerializeField] private SkillTree prevTree;
 
     public void CanOpen()
     {
         if(prevTree.isUnlocked)
         {
-            //TODO: need GameManager gold check
-            if (!isUnlocked)
+            if (!isUnlocked && IsPointEnough())
                 UnLock();
         } else
         {
@@ -46,7 +47,14 @@ public class SkillTree : MonoBehaviour
                 break;
         }
 
-        //SkillPoint »©±â
+        SkillManager.instance.skillPoint -= price;
         isUnlocked = true;
+    }
+
+    private bool IsPointEnough()
+    {
+        if (SkillManager.instance.skillPoint >= price) return true;
+
+        return false;
     }
 }

@@ -1,20 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SkillManager : MonoBehaviour
 {
+    private bool isMoving = false;
+
     public int coolTime = 15;
     public int atk = 3;
     public int atkSphere = 1;
 
-    //Maybe Skill Prefab
-    public GameObject skill;
+    public int skillPoint = 0;
+
+    //Skill Prefab
+    public GameObject skillSphere;
+    [SerializeField] List<GameObject> skills = new List<GameObject>();
 
     public static SkillManager instance;
     private void Awake()
     {
         instance = this;
+    }
+
+    void Update()
+    {
+        for(int i = 0; i < skills.Count; i++)
+        {
+            skills[i].transform.position += new Vector3(10f * Time.deltaTime, 0, 0);
+            if (skills[i].transform.position.x > 10f)
+            {
+                Destroy(skills[i]);
+                skills.RemoveAt(i);
+            }
+        }
     }
 
     public void decreaseCool(int _amount)
@@ -31,5 +51,20 @@ public class SkillManager : MonoBehaviour
     {
         atkSphere *= 3;
         //Instantiate prefab skill
+    }
+
+    public void SkillButton()
+    {
+        for(int i = 0; i < atkSphere; i++)
+        {
+            GameObject go = Instantiate(skillSphere);
+            go.transform.position += new Vector3(0, i, 0);
+            skills.Add(go);
+        }
+    }
+
+    public void StartSkill(GameObject _go)
+    {
+        _go.transform.Translate(Vector3.right * 5f * Time.deltaTime);
     }
 }
