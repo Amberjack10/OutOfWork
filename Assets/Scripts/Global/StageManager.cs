@@ -25,6 +25,7 @@ public class Stage
         ElevatorHp -= damage;
     }
 
+    // Temporary constructor. Will revise later.
     public Stage(int stageNumber)
     {
         Name = "Stage" + stageNumber.ToString();
@@ -84,15 +85,9 @@ public class StageManager : MonoBehaviour
 
     }
 
-    private void MakeStage()
-    {
-        //Instantiate(stage);
-    }
-
     private void StageSelect(int stageNum)
     {
         currentStage = new Stage(stageNum);
-        MakeStage();
     }
 
     public void StageClear()
