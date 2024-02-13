@@ -5,12 +5,8 @@ using UnityEngine;
 public class BulletBase : MonoBehaviour
 {
     protected bool isRadey;
-    protected string opponentTag;
-    protected float bulletSpeed;
-    protected int attack;
     protected float currentDuration;
 
-    protected Vector2 bulletDirection;
     protected Rigidbody2D _rigidbody2D;
 
     protected RangeAttackData rangeAttackData;

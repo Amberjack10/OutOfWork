@@ -18,7 +18,6 @@ public class RangeAttack : AttackBase
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletDuration;
 
-    public BoxCollider2D attackRange;
     public Transform shootPoint;
 
     private UnitBase unitBase;

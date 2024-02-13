@@ -8,7 +8,7 @@ public class MeleeAttack : AttackBase
     private int attack;
     private string opponentTag;
 
-    public BoxCollider2D attackRange;
+    public BoxCollider2D DamageBox;
 
     private UnitBase unitBase;
 
@@ -22,7 +22,7 @@ public class MeleeAttack : AttackBase
 
     protected void OnHit()
     {
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(attackRange.transform.position, attackRange.size, 0);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(DamageBox.bounds.center, DamageBox.size, 0);
         CallAttackEvent();
 
         foreach (Collider2D collider in colliders)
@@ -33,6 +33,12 @@ public class MeleeAttack : AttackBase
             }
         }
     }
+
+    //protected void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawCube(DamageBox.bounds.center, DamageBox.size);
+    //}
 
     protected void EndAttack()
     {

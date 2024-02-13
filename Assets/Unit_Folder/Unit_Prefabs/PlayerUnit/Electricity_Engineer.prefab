@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475158253690409327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.73, y: 1.45}
+  m_Size: {x: 1.49, y: 1.45}
   m_EdgeRadius: 0
 --- !u!1 &1077370810354778389
 GameObject:
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1095132547, guid: de1b0706b09fb404eb64a8a2792d59f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 8587639413134488172}
   - component: {fileID: 1533443063747920127}
   - component: {fileID: 3834956471883348384}
-  - component: {fileID: 4141778194683692433}
+  - component: {fileID: 3435917394886032394}
   m_Layer: 30
   m_Name: Electricity_Engineer
   m_TagString: PlayerUnit
@@ -217,7 +217,7 @@ Transform:
   - {fileID: 6506514307260889830}
   - {fileID: 3570712680155186753}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1533443063747920127
 Rigidbody2D:
@@ -291,7 +291,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.06}
   m_EdgeRadius: 0
---- !u!114 &4141778194683692433
+--- !u!114 &3435917394886032394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,11 +300,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1381569162040681953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7451ab855786361499bc240130e02eea, type: 3}
+  m_Script: {fileID: 11500000, guid: c1343d953dbbc854697df9a3ac707926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opponentTag: 
   moveDirection: {x: 0, y: 0}
+  state: 0
   health: 100
   walkSpeed: 1.5
   attack: 5
@@ -322,7 +323,7 @@ GameObject:
   - component: {fileID: 924989808164358156}
   - component: {fileID: 6365589607526307438}
   m_Layer: 30
-  m_Name: SplashAttack
+  m_Name: DamageBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +505,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 289848655, guid: 9bd55e838e25199429e53ff1e973bc68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -549,4 +550,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2c4d99de108714a97f7b4cc50f8bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: {fileID: 6427493283051761142}
+  DamageBox: {fileID: 6427493283051761142}

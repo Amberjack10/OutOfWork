@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1405025179, guid: c03c330c68238224a89ccda125b8525d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 242610374, guid: 1a4cb3519d68f8d4eafc6ab12e9b52d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2c4d99de108714a97f7b4cc50f8bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: {fileID: 8958584783674085966}
+  DamageBox: {fileID: 8958584783674085966}
 --- !u!95 &886836258753710314
 Animator:
   serializedVersion: 5
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 2220803571041159328}
   - component: {fileID: 8027515001605134508}
   - component: {fileID: 6716845233139190415}
-  - component: {fileID: 3347119451904089789}
+  - component: {fileID: 6040823044992430715}
   m_Layer: 30
   m_Name: General_Manager
   m_TagString: PlayerUnit
@@ -338,7 +338,7 @@ Transform:
   - {fileID: 3245197566320099878}
   - {fileID: 7154507732385751579}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8027515001605134508
 Rigidbody2D:
@@ -412,7 +412,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.48, y: 2.03}
   m_EdgeRadius: 0
---- !u!114 &3347119451904089789
+--- !u!114 &6040823044992430715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,12 +421,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8636708123215643758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7451ab855786361499bc240130e02eea, type: 3}
+  m_Script: {fileID: 11500000, guid: c1343d953dbbc854697df9a3ac707926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opponentTag: 
   moveDirection: {x: 0, y: 0}
-  health: 250
+  state: 0
+  health: 350
   walkSpeed: 1
   attack: 20
   attackRate: 3.5
@@ -443,7 +444,7 @@ GameObject:
   - component: {fileID: 1901104504392261065}
   - component: {fileID: 8074463132738013173}
   m_Layer: 30
-  m_Name: SplashAttack
+  m_Name: DamageBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

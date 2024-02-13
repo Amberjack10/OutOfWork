@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6986717059991854640}
   - component: {fileID: 1975562144213807714}
   - component: {fileID: 8863994337102031089}
-  - component: {fileID: 2535317188309341526}
+  - component: {fileID: 5582431763237025467}
   m_Layer: 31
   m_Name: Attendence_Recoder
   m_TagString: EnemyUnit
@@ -111,7 +111,7 @@ Transform:
   - {fileID: 7856814392615416717}
   - {fileID: 5382672465392386744}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1975562144213807714
 Rigidbody2D:
@@ -185,7 +185,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.79, y: 1.85}
   m_EdgeRadius: 0
---- !u!114 &2535317188309341526
+--- !u!114 &5582431763237025467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4680453814017886104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7451ab855786361499bc240130e02eea, type: 3}
+  m_Script: {fileID: 11500000, guid: 55e17e4af75a6be42bee6e5df629fd53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opponentTag: 
@@ -279,7 +279,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1127347591, guid: 10b8ea877f0a8394d821bd853884c6ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

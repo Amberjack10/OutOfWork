@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 296053453355389924}
   - component: {fileID: 6276946598095796203}
   - component: {fileID: 551554391056104503}
-  - component: {fileID: 7784282307905749756}
+  - component: {fileID: 485510801325290943}
   m_Layer: 30
   m_Name: Internet_Engineer
   m_TagString: PlayerUnit
@@ -33,9 +33,8 @@ Transform:
   m_Children:
   - {fileID: 4102417857331863000}
   - {fileID: 4895874733840559468}
-  - {fileID: 7959968176829277799}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6276946598095796203
 Rigidbody2D:
@@ -109,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67, y: 0.97}
   m_EdgeRadius: 0
---- !u!114 &7784282307905749756
+--- !u!114 &485510801325290943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,11 +117,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4579726518816325798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7451ab855786361499bc240130e02eea, type: 3}
+  m_Script: {fileID: 11500000, guid: c1343d953dbbc854697df9a3ac707926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opponentTag: 
   moveDirection: {x: 0, y: 0}
+  state: 0
   health: 80
   walkSpeed: 2
   attack: 10
@@ -158,7 +158,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7959968176829277799}
   m_Father: {fileID: 296053453355389924}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,7 +203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1560451699, guid: 9bd55e838e25199429e53ff1e973bc68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -228,7 +229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 3
   bulletDuration: 3
-  attackRange: {fileID: 8476510022479890735}
   shootPoint: {fileID: 7959968176829277799}
 --- !u!114 &7369019597570708254
 MonoBehaviour:
@@ -291,12 +291,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6488293657776737160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53, y: -0.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.53, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 296053453355389924}
+  m_Father: {fileID: 4895874733840559468}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6521952185229442256
@@ -363,7 +363,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3, y: 0}
+  m_Offset: {x: 4.76, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -374,5 +374,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 1}
+  m_Size: {x: 8.43, y: 1}
   m_EdgeRadius: 0

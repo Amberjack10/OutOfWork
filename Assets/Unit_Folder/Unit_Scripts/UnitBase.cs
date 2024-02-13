@@ -114,7 +114,7 @@ public class UnitBase : MonoBehaviour, IDamageable
     //--------------------------------------------------------------------------------------------------------------------------------------------------
     //Update Function
 
-    protected void Update()
+    protected virtual void Update()
     {
         switch (state)
         {
@@ -167,28 +167,14 @@ public class UnitBase : MonoBehaviour, IDamageable
         canAttack = true;
     }
 
-    protected void UpdatePassive()
+    protected virtual void UpdatePassive()
     {
-        if (foundEnemy)
-        {
-            SetState(UnitState.Attacking);
-        }
-        else
-        {
-            SetState(UnitState.Walking);
-        }
+
     }
 
     protected virtual void UpdateWalking()
     {
-        if (foundEnemy)
-        {
-            SetState(UnitState.Attacking);
-        }
-        else
-        {
-            Move_Unit();
-        }
+        
     }
 
     //--------------------------------------------------------------------------------------------------------------------------------------------------

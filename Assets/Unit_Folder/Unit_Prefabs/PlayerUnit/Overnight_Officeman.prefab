@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5046453243756924604}
   m_Father: {fileID: 4621089689553342741}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 144961829, guid: c3b8153463dd7b24b82fc9e332d9409f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,7 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 4
   bulletDuration: 3
-  attackRange: {fileID: 4203713682023099328}
   shootPoint: {fileID: 5046453243756924604}
 --- !u!114 &5916758008607677479
 MonoBehaviour:
@@ -164,12 +164,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7197233564102171912}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.19, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.20000005, y: 0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4621089689553342741}
+  m_Father: {fileID: 195661134403894485}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7937111988560649565
@@ -236,7 +236,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3, y: 0}
+  m_Offset: {x: 3.96, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -247,7 +247,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 1}
+  m_Size: {x: 6.93, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &8220124385361972630
 GameObject:
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 4621089689553342741}
   - component: {fileID: 2416098676803767382}
   - component: {fileID: 2966639628664566023}
-  - component: {fileID: 4684360746225570571}
+  - component: {fileID: 7171142041493435681}
   m_Layer: 30
   m_Name: Overnight_Officeman
   m_TagString: PlayerUnit
@@ -282,9 +282,8 @@ Transform:
   m_Children:
   - {fileID: 248580320521619631}
   - {fileID: 195661134403894485}
-  - {fileID: 5046453243756924604}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2416098676803767382
 Rigidbody2D:
@@ -358,7 +357,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 1.06}
   m_EdgeRadius: 0
---- !u!114 &4684360746225570571
+--- !u!114 &7171142041493435681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,11 +366,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8220124385361972630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7451ab855786361499bc240130e02eea, type: 3}
+  m_Script: {fileID: 11500000, guid: c1343d953dbbc854697df9a3ac707926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   opponentTag: 
   moveDirection: {x: 0, y: 0}
+  state: 0
   health: 30
   walkSpeed: 2
   attack: 10
