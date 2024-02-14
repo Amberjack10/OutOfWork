@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c907c63c357fcb418f9458e6cfde034, type: 3}
+  m_Name: Unit_Team_Ace
+  m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 7422788833641737347, guid: 20fd69d796420b242b7652c0c6764545, type: 3}
+  unitName: "\uC5D0\uC774\uC2A4"
+  price: 100
+  coolTime: 50

@@ -59,6 +59,7 @@ public class StageController : MonoBehaviour
     {
         // TODO : Generate Monsters
         Debug.Log("MakingMonsters");
+        
     }
 
     private void OnTakeDamage(int _damage)
