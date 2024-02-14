@@ -14,7 +14,6 @@ public class DragCamera : MonoBehaviour
     void Start()
     {
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
-        Debug.Log(limitMinX + cameraHalfWidth);
     }
 
     // Update is called once per frame
