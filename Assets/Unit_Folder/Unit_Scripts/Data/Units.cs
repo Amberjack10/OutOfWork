@@ -8,4 +8,5 @@ public class Units : ScriptableObject
     public GameObject unitPrefab;
     public string unitName;
     public int price;
+    public float coolTime;
 }
