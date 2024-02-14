@@ -20,11 +20,6 @@ public class SkillTreeController : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        
-    }
-
     public void UnlockInteract()
     {
         for(int i = 0; i < skillTrees.Count; i++)
@@ -33,7 +28,6 @@ public class SkillTreeController : MonoBehaviour
             SkillTree prevTree = tree.prevTree;
             Button btn = skillTrees[i].GetComponent<Button>();
 
-            Debug.Log($"{i + 1} ¹ø {!btn.interactable}, {prevTree.isUnlocked}, {!tree.isUnlocked}");
             if(!btn.interactable && prevTree.isUnlocked && !tree.isUnlocked)
             {
                 btn.interactable = true;
