@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,8 @@ public class SelectStage : MonoBehaviour
     [Header("бс GameObject")]
     [SerializeField] private GameObject prefabOptionUI;
     [SerializeField] private GameObject stageLock;
+    [SerializeField] private GameObject upButton;
+    [SerializeField] private GameObject downButton;
 
     [Header("бс Canvas")]
     [SerializeField] private Canvas canvas;
@@ -31,7 +34,13 @@ public class SelectStage : MonoBehaviour
         //}
         if (GameManager.instance.stageCleared < int.Parse(stageTxt.text))
         {
+            Debug.Log("stageLock");
             stageLock.SetActive(false);
+        }
+
+        if(stage == 5)
+        {
+            upButton.SetActive(false);
         }
 
         optionUI = Instantiate(prefabOptionUI, canvas.transform);
@@ -50,8 +59,13 @@ public class SelectStage : MonoBehaviour
         if (stage >= 5)
             return;
 
+        if (downButton.activeSelf == false) downButton.SetActive(true);
+
         stage++;
         stageTxt.text = stage.ToString();
+
+        if (stage >= 5)
+            upButton.SetActive(false);
     }
 
     public void OnclickDownButton()
@@ -63,7 +77,21 @@ public class SelectStage : MonoBehaviour
 
             stage--;
             stageTxt.text = stage.ToString();
+
+            SetStageLock();
+            if (upButton.activeSelf == false) upButton.SetActive(true);
         }
+        else return;
+    }
+
+    private void SetStageLock()
+    {
+        if (stage <= 1)
+        {
+            downButton.SetActive(false);
+        }
+        else if (GameManager.instance.stageCleared < int.Parse(stageTxt.text)) return;
+        else stageLock.SetActive(true);
     }
 
     public void OnStageSelectButton()

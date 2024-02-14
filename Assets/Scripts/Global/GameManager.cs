@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+
+        if (PlayerPrefs.HasKey("StageCleared"))
+        {
+            stageCleared = PlayerPrefs.GetInt("StageCleared");
+        }
+        else stageCleared = 1;
     }
 
     // Start is called before the first frame update
@@ -66,12 +72,12 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StageManager.instance.OnStageClear += StageClear;
+        // StageManager.instance.OnStageClear += StageClear;
         if (PlayerPrefs.HasKey("StageCleared"))
         {
             stageCleared = PlayerPrefs.GetInt("StageCleared");
         }
-        else stageCleared = 5;
+        else stageCleared = 1;
     }
 
     // TODO : Skill point Manage.
