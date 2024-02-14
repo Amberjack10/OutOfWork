@@ -5,9 +5,11 @@ using UnityEngine;
 public class Elevator_Door : MonoBehaviour, IDamageable
 {
     public int maxHealth;
-    private int currentHealth;
+    [SerializeField]private int currentHealth;
 
     public bool isDestroyed = false;
+
+    protected Animator animator;
 
     public float HealthRate 
     {
@@ -17,6 +19,7 @@ public class Elevator_Door : MonoBehaviour, IDamageable
     private void Awake()
     {
         currentHealth = maxHealth;
+        animator = GetComponentInChildren<Animator>();
     }
 
     public void TakeDamage(int damage)
@@ -24,7 +27,21 @@ public class Elevator_Door : MonoBehaviour, IDamageable
         currentHealth = currentHealth - damage;
         if(currentHealth <= 0)
         {
-            isDestroyed = true;
+            StartCoroutine("Die");
         }
+    }
+
+    IEnumerator Die()
+    {
+        isDestroyed = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+        animator.SetTrigger("Open");
+
+        while (animator.IsInTransition(0) == false)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
     }
 }
