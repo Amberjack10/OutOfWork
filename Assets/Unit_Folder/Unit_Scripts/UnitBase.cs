@@ -215,7 +215,7 @@ public class UnitBase : MonoBehaviour, IDamageable
 
     protected void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag(opponentTag) && !collision.GetComponent<UnitBase>().isDead)
+        if (collision.CompareTag(opponentTag) && collision.enabled)
         {
             foundEnemy = true;
         }
