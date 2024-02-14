@@ -6,6 +6,8 @@ public class Skill : MonoBehaviour
 {
     private Animator anim;
 
+    public AudioClip clip;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -26,6 +28,7 @@ public class Skill : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemyUnit"))
         {
+            SoundManager.instance.PlaySFX(clip);
             collision.gameObject.GetComponent<IDamageable>().TakeDamage(SkillManager.instance.atk);
             StartCoroutine(Destroy());
         }

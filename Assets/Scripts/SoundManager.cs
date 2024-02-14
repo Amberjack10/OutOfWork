@@ -9,6 +9,13 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip[] bgmClips;
 
+    public static SoundManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public void PlayBGM(string _scene)
     {
         int index = 0;
