@@ -25,7 +25,11 @@ public class SelectStage : MonoBehaviour
     private void Start()
     {
         stageTxt.text = stage.ToString();
-        if(isClear)
+        //if(isClear)
+        //{
+        //    stageLock.SetActive(false);
+        //}
+        if (GameManager.instance.stageCleared < int.Parse(stageTxt.text))
         {
             stageLock.SetActive(false);
         }
@@ -47,16 +51,18 @@ public class SelectStage : MonoBehaviour
             return;
 
         stage++;
+        stageTxt.text = stage.ToString();
     }
 
     public void OnclickDownButton()
     {
-        if (isClear)
+        if (GameManager.instance.stageCleared < int.Parse(stageTxt.text))
         {
             if (stage < 1)
                 return;
 
             stage--;
+            stageTxt.text = stage.ToString();
         }
     }
 

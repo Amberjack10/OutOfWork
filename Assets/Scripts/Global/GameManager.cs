@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private int stageCleared;
+    public int stageCleared;
 
     public event Action<int> OnStageSelect;
 
@@ -26,11 +27,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StageManager.instance.OnStageClear += StageClear;
-        if (PlayerPrefs.HasKey("StageCleared"))
-        {
-            stageCleared = PlayerPrefs.GetInt("StageCleared");
-        }
-        else stageCleared = 5;
     }
 
     // Update is called once per frame
@@ -56,6 +52,26 @@ public class GameManager : MonoBehaviour
     {
         stageCleared--;
         PlayerPrefs.SetInt("StageCleared", stageCleared);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        StageManager.instance.OnStageClear += StageClear;
+        if (PlayerPrefs.HasKey("StageCleared"))
+        {
+            stageCleared = PlayerPrefs.GetInt("StageCleared");
+        }
+        else stageCleared = 5;
     }
 
     // TODO : Skill point Manage.
