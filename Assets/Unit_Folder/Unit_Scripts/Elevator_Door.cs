@@ -5,9 +5,9 @@ using UnityEngine;
 public class Elevator_Door : MonoBehaviour, IDamageable
 {
     public int maxHealth;
-    [SerializeField]private int currentHealth;
+    private int currentHealth;
 
-    public bool isDestroyed = false;
+    [HideInInspector]public bool isDestroyed = false;
 
     protected Animator animator;
 
@@ -18,8 +18,12 @@ public class Elevator_Door : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        currentHealth = maxHealth;
         animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(int damage)
