@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviour
         switch (_scene)
         {
             //TODO: SceneTitle input
-            //case "TitleMenu": index = 0; break;
+            case "StageScene": index = 0; break;
         }
 
         bgmPlayer.clip = bgmClips[index];
