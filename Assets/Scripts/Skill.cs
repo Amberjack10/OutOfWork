@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     void Start()
     {
         transform.localPosition = new Vector3(-25f, -2.5f, 0);
@@ -21,7 +26,14 @@ public class Skill : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyUnit"))
         {
             collision.gameObject.GetComponent<IDamageable>().TakeDamage(SkillManager.instance.atk);
-            Destroy(gameObject);
+            StartCoroutine(Destroy());
         }
+    }
+
+    IEnumerator Destroy()
+    {
+        anim.SetTrigger("Destroy");
+        yield return new WaitForSeconds(0.3f);
+        Destroy(gameObject);
     }
 }
