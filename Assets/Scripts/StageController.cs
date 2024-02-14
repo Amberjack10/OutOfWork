@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class StageController : MonoBehaviour
@@ -16,6 +17,12 @@ public class StageController : MonoBehaviour
 
     [SerializeField] private Transform playerUnitSpawnPoint;
 
+    [Header("UI")]
+    [SerializeField] private GameObject uiPrefab;
+    [SerializeField] private TextMeshProUGUI coinText;
+
+    private GameObject stageUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +32,16 @@ public class StageController : MonoBehaviour
         stage = StageManager.instance.currentStage;
         playerUnits = StageManager.instance.playerUnits;
         StartRegenPlayerUnitCost();
+        stageUI = Instantiate(uiPrefab);
+        coinText = stageUI.GetComponentInChildren<TextMeshProUGUI>();
         InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
     }
 
     // Update is called once per frame
     void Update()
     {
+        coinText.text = playerUnitCost.ToString();
+
         timeLimit -= Time.deltaTime;
 
         if (timeLimit <= 0) StageManager.instance.StageOver();

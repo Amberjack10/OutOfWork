@@ -15687,3 +15687,5 @@ MonoBehaviour:
   maxPlayerUnitCost: 100
   playerUnitCostRate: 2
   playerUnitSpawnPoint: {fileID: 820430807}
+  uiPrefab: {fileID: 7383978158193206673, guid: 5366e9403866bd245be7880d35b2323b, type: 3}
+  coinText: {fileID: 0}
