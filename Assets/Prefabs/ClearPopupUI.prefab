@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Clear!
+  m_text: Game OVer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
   m_sharedMaterial: {fileID: -3275990344474876961, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
@@ -602,6 +602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ee0ba74a4ab89499f3c45ad28b6083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageText: {fileID: 6043203973073856416}
+  rewardText: {fileID: 338564358555151165}
+  headText: {fileID: 7868661585920658981}
 --- !u!1 &3627911961989985548
 GameObject:
   m_ObjectHideFlags: 0
