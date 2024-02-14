@@ -70,6 +70,10 @@ public class StageManager : MonoBehaviour
     public event Action OnStageClear;
     public event Action OnStageOver;
 
+    public Transform EnemyStopPosition;
+
+    public List<Units> playerUnits;
+
     public static StageManager instance;
 
     private void Awake()
@@ -85,6 +89,7 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         GameManager.instance.OnStageSelect += StageSelect;
+        EnemyStopPosition.position = new Vector3(-15.49f, -2.55f, 0f);
     }
 
     // Update is called once per frame
