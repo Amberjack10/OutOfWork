@@ -472,7 +472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7836126336743591703, guid: 3cfe6282ca480454d9e4acdb11f6ce78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.09
+      value: 17.55
       objectReference: {fileID: 0}
     - target: {fileID: 7836126336743591703, guid: 3cfe6282ca480454d9e4acdb11f6ce78, type: 3}
       propertyPath: m_LocalPosition.y
@@ -778,6 +778,10 @@ PrefabInstance:
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2112,7 +2116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125732451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.08, y: 0, z: -10}
+  m_LocalPosition: {x: -18.87, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
