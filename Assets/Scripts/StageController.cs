@@ -7,11 +7,14 @@ public class StageController : MonoBehaviour
 {
     public Stage stage;
     public float timeLimit = 120f;
+    private List<Units> playerUnits;
 
     // Player's In-game Unit Cost. Uses to Generate Unit.
-    public int playerUnitCost = 0;
-    public int maxPlayerUnitCost = 10;
-    public float playerUnitCostRate = 2f;
+    [SerializeField] private int playerUnitCost = 0;
+    [SerializeField] private int maxPlayerUnitCost = 100;
+    [SerializeField] private float playerUnitCostRate = 2f;
+
+    [SerializeField] private Transform playerUnitSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,7 @@ public class StageController : MonoBehaviour
         // OnElevatorAttack += OnTakeDamage;
 
         stage = StageManager.instance.currentStage;
+        playerUnits = StageManager.instance.playerUnits;
         StartRegenPlayerUnitCost();
         InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
     }
@@ -40,20 +44,24 @@ public class StageController : MonoBehaviour
     public void RegenPlayerUnitCost()
     {
         if (playerUnitCost >= maxPlayerUnitCost) return;
-        playerUnitCost++;
+        playerUnitCost += 5;
     }
 
     // Generate Units.
     public void OnUnitSelectButton(int index)
     {
-        // if(playerUnitCost >= UnitCost) Instantiate(Unit);
-        MakeUnits(index);
+        if (playerUnitCost >= playerUnits[index].price)
+        {
+            MakeUnits(index);
+            playerUnitCost = playerUnitCost - playerUnits[index].price > 0 ? playerUnitCost - playerUnits[index].price : 0;
+        }
+        else return;
     }
 
     private void MakeUnits(int index)
     {
         Debug.Log($"Making Unit {index}");
-        GameObject playerUnit = Instantiate(Resources.Load("PlayerUnit/Overnight_Officeman Variant")) as GameObject;
+        GameObject playerUnit = Instantiate(playerUnits[index].unitPrefab, playerUnitSpawnPoint.position, Quaternion.identity);
     }
 
     private void MakeMonsters()

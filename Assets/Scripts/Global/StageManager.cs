@@ -72,6 +72,8 @@ public class StageManager : MonoBehaviour
 
     public Transform EnemyStopPosition;
 
+    public List<Units> playerUnits;
+
     public static StageManager instance;
 
     private void Awake()
