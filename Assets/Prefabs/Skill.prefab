@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 439008149229205640}
   - component: {fileID: 8917184642450960802}
   - component: {fileID: 1699090928078717248}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: Skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5097fec93f6523409d89dd60faa5b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
 --- !u!95 &1699090928078717248
 Animator:
   serializedVersion: 5

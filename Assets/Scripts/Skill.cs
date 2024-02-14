@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
-    //TODO: if Camera is not main Camera change
-    public Camera mainCamera;
-
-    private void Awake()
-    {
-        mainCamera = Camera.main;
-    }
     // Start is called before the first frame update
     void Start()
     {
-        SetCameraToLocal();
+        transform.localPosition = new Vector3(-25f, -2.5f, 0);
     }
 
     // Update is called once per frame
@@ -23,15 +16,12 @@ public class Skill : MonoBehaviour
 
     }
 
-    void SetCameraToLocal()
-    {
-        Vector3 localCameraPos = transform.InverseTransformPoint(mainCamera.transform.position);
-        transform.localPosition = localCameraPos - new Vector3(10, 0, -10);
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //TODO: Check other collision is Enemy
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("EnemyUnit"))
+        {
+            collision.gameObject.GetComponent<IDamageable>().TakeDamage(SkillManager.instance.atk);
+            Destroy(gameObject);
+        }
     }
 }

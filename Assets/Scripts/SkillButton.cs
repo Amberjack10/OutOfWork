@@ -9,20 +9,10 @@ public class SkillButton : MonoBehaviour
     [SerializeField] private Button btn;
     private bool isCool = true;
     
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void PressButton()
     {
         btn.interactable = false;
+        SkillManager.instance.SkillButton();
         StartCoroutine(CoolTime());
     }
 
