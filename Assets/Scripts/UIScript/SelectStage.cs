@@ -111,4 +111,8 @@ public class SelectStage : MonoBehaviour
         optionUI.SetActive(true);
     }
 
+    public void OnClickSkillUpgradeButton()
+    {
+        LoadingSceneController.LoadScene("KYW_SkillTree");
+    }
 }
