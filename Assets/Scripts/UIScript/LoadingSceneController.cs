@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,7 +11,8 @@ public class LoadingSceneController : MonoBehaviour
 
     [Header("бс Image")]
     [SerializeField] private Image progressBar;
-
+    [SerializeField] private string[] tip;
+    [SerializeField] private TextMeshProUGUI tipText;
     public static void LoadScene(string sceneName)
     {
         nextScene = sceneName;
@@ -20,6 +22,8 @@ public class LoadingSceneController : MonoBehaviour
     void Start()
     {
         StartCoroutine(LoadSceneProcess());
+        int randomIndex = Random.Range(0, tip.Length);
+        tipText.text = tip[randomIndex];
     }
 
 
