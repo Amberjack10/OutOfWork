@@ -20,7 +20,7 @@ public class CameraManager : MonoBehaviour
     private Vector3 cameraStartPosition;
     private Vector3 cameraSetPosition;
 
-    private bool canMoveCamera = false;
+    [SerializeField]private bool canMoveCamera = false;
 
     private void Awake()
     {
@@ -57,11 +57,13 @@ public class CameraManager : MonoBehaviour
         {
             cam.transform.position = Vector3.Lerp(cam.transform.position, cameraSetPosition, Time.deltaTime * 1.5f);
             yield return null;
+
+            float offset = 1f;
+            if (cam.transform.position.x - offset <= cameraSetPosition.x)
+            {
+                canMoveCamera = true;
+            }
         }
 
-        if(cam.transform.position == cameraSetPosition)
-        {
-            canMoveCamera = true;
-        }
     }
 }

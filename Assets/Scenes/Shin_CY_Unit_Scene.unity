@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman (5)
@@ -213,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140240005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.0553374, y: -3.2405932, z: -0.019137926}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2125732453}
   mapScale: {fileID: 1534448364}
+  canMoveCamera: 0
 --- !u!1 &209985708
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman (3)
@@ -435,6 +444,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman (2)
@@ -556,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513251098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.49, y: -1.6399999, z: 0}
+  m_LocalPosition: {x: -15.49, y: -1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -655,7 +668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1000
-  currentHealth: 0
   isDestroyed: 0
 --- !u!1 &832826152
 GameObject:
@@ -938,7 +950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302414128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.13, y: -1.6399999, z: 0}
+  m_LocalPosition: {x: -25.13, y: -1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6717,6 +6729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman (4)
@@ -6866,6 +6882,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman (7)
@@ -7121,6 +7141,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman
@@ -7158,7 +7182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910045964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.41, y: -1.6399999, z: 0}
+  m_LocalPosition: {x: 21.41, y: -1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8963,6 +8987,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman (6)
@@ -9028,6 +9056,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7171142041493435681, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
+      propertyPath: StopPosition
+      value: 
+      objectReference: {fileID: 620361970}
     - target: {fileID: 8220124385361972630, guid: 6634b838e3c8b2d43904f812ecfa1680, type: 3}
       propertyPath: m_Name
       value: Overnight_Officeman (1)
@@ -9126,7 +9158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125732451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.02, y: 0, z: -10}
+  m_LocalPosition: {x: 5.52, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
