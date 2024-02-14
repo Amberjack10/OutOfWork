@@ -34,7 +34,6 @@ public class SelectStage : MonoBehaviour
         //}
         if (GameManager.instance.stageCleared < int.Parse(stageTxt.text))
         {
-            Debug.Log("stageLock");
             stageLock.SetActive(false);
         }
 
@@ -59,11 +58,13 @@ public class SelectStage : MonoBehaviour
         if (stage >= 5)
             return;
 
+        // If downButton was deactivated
         if (downButton.activeSelf == false) downButton.SetActive(true);
 
         stage++;
         stageTxt.text = stage.ToString();
 
+        // If Elevator reached 5th floor, deactivate upButton.
         if (stage >= 5)
             upButton.SetActive(false);
     }
@@ -79,6 +80,8 @@ public class SelectStage : MonoBehaviour
             stageTxt.text = stage.ToString();
 
             SetStageLock();
+
+            // If upButton was deactivated
             if (upButton.activeSelf == false) upButton.SetActive(true);
         }
         else return;
@@ -86,6 +89,7 @@ public class SelectStage : MonoBehaviour
 
     private void SetStageLock()
     {
+        // If Elevator reached 1st floor, deactivate downButton.
         if (stage <= 1)
         {
             downButton.SetActive(false);
