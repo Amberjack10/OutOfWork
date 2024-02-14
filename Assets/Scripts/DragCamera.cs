@@ -7,7 +7,9 @@ public class DragCamera : MonoBehaviour
     Vector2 clickPoint;
     float dragSpeed = 30f;
 
+    // Min, Max values about Camera position.x
     float limitMinX = -28f, limitMaxX = 24f;
+    // Camera Half Width Size
     float cameraHalfWidth;
 
     // Start is called before the first frame update
@@ -19,7 +21,9 @@ public class DragCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if(Input.GetMouseButtonDown(1)) clickPoint = Input.mousePosition;
+        // Input.GetMouseButtonDown(1) : On Right Mouse Button Click
+        if (Input.GetMouseButtonDown(1)) clickPoint = Input.mousePosition;
+        // Input.GetMouseButton(1) : While Pressing Right Mouse Button
         if (Input.GetMouseButton(1))
         {
             Vector3 position = Camera.main.ScreenToViewportPoint((Vector2)Input.mousePosition - clickPoint);
