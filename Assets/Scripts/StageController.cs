@@ -34,6 +34,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private GameObject clearPopupPrefab;
     [SerializeField] private TextMeshProUGUI coinText;
     [SerializeField] private TextMeshProUGUI timer;
+    [SerializeField] private Image HpBar;
 
     [Header("Enemy Unit")]
     [SerializeField] private GameObject[] enemyPrefabs;
@@ -60,6 +61,8 @@ public class StageController : MonoBehaviour
         //clearPopupPrefab = Instantiate(clearPopupPrefab);
 
         coinText = stageUI.GetComponentInChildren<TextMeshProUGUI>();
+        HpBar = stageUI.transform.Find("Head/Elevator_HP/ElevatorHP_Bar").GetComponent<Image>();
+
         timer = stageUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         timer.text = $"{((int)timeLimit / 60).ToString():D2}:{((int)timeLimit % 60).ToString("D2")}";
 
@@ -72,6 +75,7 @@ public class StageController : MonoBehaviour
     void Update()
     {
         elevatorHPRate = elevatorDoor.HealthRate;
+        HpBar.fillAmount = elevatorHPRate;
 
         if (!attendence_boss)
         {
