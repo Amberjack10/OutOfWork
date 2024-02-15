@@ -17,7 +17,7 @@ public class Ending : MonoBehaviour
     private float bodyTextTime;
     void Start()
     {
-
+        Debug.Log("Ending");
     }
 
     // Update is called once per frame
