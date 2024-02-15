@@ -364,4 +364,5 @@ MonoBehaviour:
   amount: 0
   price: 0
   priceTxt: {fileID: 0}
+  errorSound: {fileID: 8300000, guid: f9320e15c4617f44e8923fe782961dec, type: 3}
   prevTree: {fileID: 0}

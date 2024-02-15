@@ -18,6 +18,8 @@ public class SkillTree : MonoBehaviour
     [SerializeField] private int amount;
     [SerializeField] private int price;
     [SerializeField] TextMeshProUGUI priceTxt;
+    [SerializeField] AudioClip errorSound;
+
     public SkillTree prevTree;
 
     public void CanOpen()
@@ -55,7 +57,8 @@ public class SkillTree : MonoBehaviour
     private bool IsPointEnough()
     {
         if (SkillManager.instance.skillPoint >= price) return true;
-
+        
+        SoundManager.instance.PlaySFX(errorSound);
         return false;
     }
 }
