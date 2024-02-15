@@ -11,6 +11,8 @@ public class Elevator_Door : MonoBehaviour, IDamageable
 
     protected Animator animator;
 
+    public Transform UnitStopPosition;
+
     public float HealthRate 
     {
         get { return (float)(currentHealth / maxHealth); } 
@@ -24,6 +26,9 @@ public class Elevator_Door : MonoBehaviour, IDamageable
     private void Start()
     {
         currentHealth = maxHealth;
+
+        StageManager.instance.EnemyStopPosition = UnitStopPosition;
+        StageManager.instance.elevator = gameObject;
     }
 
     public void TakeDamage(int damage)
