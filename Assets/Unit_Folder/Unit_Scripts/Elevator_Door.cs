@@ -31,6 +31,11 @@ public class Elevator_Door : MonoBehaviour, IDamageable
         StageManager.instance.elevator = gameObject;
     }
 
+    public void SetHP()
+    {
+        currentHealth = maxHealth;
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
