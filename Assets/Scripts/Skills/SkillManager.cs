@@ -15,9 +15,12 @@ public class SkillManager : MonoBehaviour
 
     public int skillPoint = 0;
 
+    public List<bool> treeUnlocked = new List<bool>();
+
     //Skill Prefab
     public GameObject skillSphere;
     [SerializeField] List<GameObject> skills = new List<GameObject>();
+
 
     public static SkillManager instance;
     private void Awake()
@@ -77,5 +80,10 @@ public class SkillManager : MonoBehaviour
     {
         skillPoint += _reward;
         Debug.Log(skillPoint);
+    }
+
+    public void SaveUnlocked(int _index, bool _isUnlocked)
+    {
+        treeUnlocked[_index] = _isUnlocked;
     }
 }
