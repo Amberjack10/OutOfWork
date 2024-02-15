@@ -13,7 +13,11 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else Destroy(gameObject);
     }
 
     private void Start()
@@ -27,7 +31,6 @@ public class SoundManager : MonoBehaviour
 
         switch (_scene)
         {
-            //TODO: SceneTitle input
             case "StartScene": index = 0; break;
             case "SSH_Stage": index = 1; break;
             default: index = 0; break;

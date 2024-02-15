@@ -58,7 +58,6 @@ public class StageController : MonoBehaviour
         StartRegenPlayerUnitCost();
 
         stageUI = Instantiate(uiPrefab);
-        //clearPopupPrefab = Instantiate(clearPopupPrefab);
 
         coinText = stageUI.GetComponentInChildren<TextMeshProUGUI>();
         HpBar = stageUI.transform.Find("Head/Elevator_HP/ElevatorHP_Bar").GetComponent<Image>();
@@ -145,12 +144,10 @@ public class StageController : MonoBehaviour
     IEnumerator CoolTime(GameObject button, Units unit)
     {
         float cool = unit.coolTime;
-        float maxCool = cool;
-        Image img = button.GetComponentInChildren<Image>();
+
         while (cool > 0f)
         {
             cool -= Time.deltaTime;
-            img.fillAmount = (cool / maxCool);
 
             yield return new WaitForFixedUpdate();
         }
@@ -159,14 +156,11 @@ public class StageController : MonoBehaviour
 
     private void MakeUnits(int index)
     {
-        Debug.Log($"Making Unit {index}");
         GameObject playerUnit = Instantiate(playerUnits[index].unitPrefab, playerUnitSpawnPoint.position, Quaternion.identity);
     }
 
     private void MakeMonsters(MonsterType[] monster)
     {
-        // TODO : Generate Monsters
-
         float enemySpawnRate;
 
         foreach(MonsterType monsterType in stage.stageMonsters)

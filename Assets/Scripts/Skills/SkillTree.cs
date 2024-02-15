@@ -28,9 +28,6 @@ public class SkillTree : MonoBehaviour
         {
             if (!isUnlocked && IsPointEnough())
                 UnLock();
-        } else
-        {
-            Debug.Log("prevTree is locked");
         }
     }
 
