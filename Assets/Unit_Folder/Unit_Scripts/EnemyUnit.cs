@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class EnemyUnit : UnitBase
 {
+    public MonsterType monsterType;
+
+    protected override void GetCostOnDie()
+    {
+        base.GetCostOnDie();
+
+        StageController stage = GameObject.Find("Stage").GetComponent<StageController>();
+
+        int bonus = (5 - StageManager.instance.currentStage.NowStage) * 10;
+        int cost = (((int)monsterType + 1) * 5);
+
+        stage.AddCost(cost);
+    }
 
     protected override void UpdatePassive()
     {
