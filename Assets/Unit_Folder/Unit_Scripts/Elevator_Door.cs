@@ -41,7 +41,6 @@ public class Elevator_Door : MonoBehaviour, IDamageable
         if(currentHealth <= 0)
         {
             StartCoroutine("Die");
-            StageManager.instance.StageClear();
         }
     }
 
@@ -56,6 +55,6 @@ public class Elevator_Door : MonoBehaviour, IDamageable
         {
             yield return new WaitForEndOfFrame();
         }
-
+        StageManager.instance.StageClear();
     }
 }

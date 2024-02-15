@@ -30,8 +30,15 @@ public class ClearPopupUI : MonoBehaviour
 
     public void OnClickcontinueButton()
     {
-        //LoadingSceneController.LoadScene("StageScene-KSM");
         Time.timeScale = 1.0f;
+
+        //LoadingSceneController.LoadScene("StageScene-KSM");
+        if (StageManager.instance.currentStage.NowStage == 1)
+        {
+            Debug.Log("ending button");
+            LoadingSceneController.LoadScene("Ending_KSM");
+            return;
+        }
         LoadingSceneController.LoadScene("SSH_GameLogic");
     }
 

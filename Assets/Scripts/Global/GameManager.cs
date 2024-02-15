@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey("StageCleared"))
         {
+            PlayerPrefs.DeleteKey("StageCleared");
             stageCleared = PlayerPrefs.GetInt("StageCleared");
         }
         else stageCleared = 1;
