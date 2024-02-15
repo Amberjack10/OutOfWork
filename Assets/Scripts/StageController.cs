@@ -18,6 +18,7 @@ public class StageController : MonoBehaviour
 
     [SerializeField] private Transform playerUnitSpawnPoint;
     [SerializeField] private Transform enemySpawnPosition;
+    [SerializeField] private Transform enemyStopPosition;
 
     [Header("UI")]
     [SerializeField] private GameObject uiPrefab;
@@ -35,6 +36,8 @@ public class StageController : MonoBehaviour
     {
         // Subscribe Player's Attack Event
         // OnElevatorAttack += OnTakeDamage;
+
+        StageManager.instance.EnemyStopPosition = enemyStopPosition;
 
         stage = StageManager.instance.currentStage;
         playerUnits = StageManager.instance.playerUnits;
