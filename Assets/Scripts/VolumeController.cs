@@ -14,9 +14,9 @@ public class VolumeController : MonoBehaviour
 
     private void Start()
     {
-        float volume;
-
-        
+        Debug.Log("0¹ø" + masterSlider.value);
+        SetVolume();
+        Debug.Log("1¹ø" + masterSlider.value);
     }
 
     public void VolumeControl(string _type)
@@ -38,10 +38,20 @@ public class VolumeController : MonoBehaviour
                 slider = masterSlider;
                 break;
         }
-
+        
         float volume = slider.value;
 
         if (volume == -40f) audioMixer.SetFloat(_type, -80);
         else audioMixer.SetFloat(_type, volume);
+    }
+
+    void SetVolume()
+    {
+        audioMixer.GetFloat("Master",out float masterVolume);
+        masterSlider.value = masterVolume;
+        audioMixer.GetFloat("BGM", out float bgmVolume);
+        bgmSlider.value = bgmVolume;
+        audioMixer.GetFloat("SFX", out float sfxVolume);
+        sfxSlider.value = sfxVolume;
     }
 }
