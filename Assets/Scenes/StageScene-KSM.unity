@@ -1233,6 +1233,8 @@ MonoBehaviour:
   stageTxt: {fileID: 1183557089}
   prefabOptionUI: {fileID: 4505528730898321632, guid: 535eb19cef890374595555be15126704, type: 3}
   stageLock: {fileID: 66481500}
+  upButton: {fileID: 1459629770}
+  downButton: {fileID: 801611608}
   canvas: {fileID: 1040304558}
 --- !u!4 &1415684504
 Transform:
