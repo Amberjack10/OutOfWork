@@ -83,12 +83,10 @@ public class Stage
 
 public class StageManager : MonoBehaviour
 {
-    public int temp_Stage;
-
     public Stage[] stages;
     public Stage currentStage;
 
-    public event Action OnStageClear;
+    public event Action<int> OnStageClear;
     public event Action OnStageOver;
     public event Action<Stage> StartStage; 
 
@@ -106,8 +104,6 @@ public class StageManager : MonoBehaviour
         else Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-
-        StageSelect(temp_Stage);
     }
 
     // Start is called before the first frame update
@@ -129,12 +125,14 @@ public class StageManager : MonoBehaviour
 
     public void StageClear()
     {
-        OnStageClear?.Invoke();
+        OnStageClear?.Invoke(currentStage.Reward);
+        Time.timeScale = 0.0f;
     }
 
     public void StageOver()
     {
         OnStageOver?.Invoke();
+        Time.timeScale = 0.0f;
     }
 
     private void OnEnable()

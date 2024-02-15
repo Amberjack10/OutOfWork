@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SkillManager : MonoBehaviour
 {
@@ -20,6 +23,11 @@ public class SkillManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        StageManager.instance.OnStageClear += UpdateSkillPoint;
     }
 
     void Update()
@@ -63,5 +71,11 @@ public class SkillManager : MonoBehaviour
     public void StartSkill(GameObject _go)
     {
         _go.transform.Translate(Vector3.right * 5f * Time.deltaTime);
+    }
+
+    private void UpdateSkillPoint(int _reward)
+    {
+        skillPoint += _reward;
+        Debug.Log(skillPoint);
     }
 }

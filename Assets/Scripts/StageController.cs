@@ -8,7 +8,7 @@ using UnityEngine;
 public class StageController : MonoBehaviour
 {
     public Stage stage;
-    public float timeLimit = 10f;
+    public float timeLimit = 180f;
     private List<Units> playerUnits;
 
     private bool attendence_boss;
@@ -55,7 +55,7 @@ public class StageController : MonoBehaviour
         StartRegenPlayerUnitCost();
 
         stageUI = Instantiate(uiPrefab);
-        clearPopupPrefab = Instantiate(clearPopupPrefab);
+        //clearPopupPrefab = Instantiate(clearPopupPrefab);
 
         coinText = stageUI.GetComponentInChildren<TextMeshProUGUI>();
         timer = stageUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
@@ -95,10 +95,13 @@ public class StageController : MonoBehaviour
         timeLimit -= Time.deltaTime;
 
         timer.text = $"{((int)timeLimit / 60).ToString():D2}:{((int)timeLimit % 60).ToString("D2")}";
-
+    }
+    private void FixedUpdate()
+    {
         if (timeLimit <= 0)
         {
             StageManager.instance.StageOver();
+            Time.timeScale = 0;
         }
     }
 
@@ -110,7 +113,7 @@ public class StageController : MonoBehaviour
     public void RegenPlayerUnitCost()
     {
         if (playerUnitCost >= maxPlayerUnitCost) return;
-        playerUnitCost += 5;
+        playerUnitCost += 25;
     }
 
     // Generate Units.

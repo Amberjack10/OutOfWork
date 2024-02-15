@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     }
 
     // TODO : Stage Unlock
-    private void StageClear()
+    private void StageClear(int reward)
     {
         stageCleared--;
         PlayerPrefs.SetInt("StageCleared", stageCleared);
