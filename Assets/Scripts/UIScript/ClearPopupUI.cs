@@ -22,6 +22,12 @@ public class ClearPopupUI : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        StageManager.instance.OnStageClear -= StageClear;
+        StageManager.instance.OnStageOver -= GameOver;
+    }
+
     public void OnClickcontinueButton()
     {
         //LoadingSceneController.LoadScene("StageScene-KSM");
