@@ -2000,15 +2000,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5236295722138054548, guid: 994033c61e858e64d81b3dcdbcfbac3d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.65834
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236295722138054548, guid: 994033c61e858e64d81b3dcdbcfbac3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1006432
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236295722138054548, guid: 994033c61e858e64d81b3dcdbcfbac3d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.007131405
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236295722138054548, guid: 994033c61e858e64d81b3dcdbcfbac3d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2078,7 +2078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyStopPosition: {fileID: 0}
-  elevator: {fileID: 6793854154030578851, guid: c8277a7f3a4a69a4ea6c596e590edf3e, type: 3}
+  ElevatorPosition: {fileID: 0}
   playerUnits:
   - {fileID: 11400000, guid: e004f5231544dc8429790aaefae456f6, type: 2}
   - {fileID: 11400000, guid: 48a3e86d90064c249b64404b6f414b84, type: 2}

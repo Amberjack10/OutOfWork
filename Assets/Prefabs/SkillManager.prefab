@@ -48,5 +48,6 @@ MonoBehaviour:
   atk: 20
   atkSphere: 1
   skillPoint: 100
+  treeUnlocked: 010000000000
   skillSphere: {fileID: 729449326579179747, guid: 8b8f4ba6521b4034e94724edf12cce51, type: 3}
   skills: []
