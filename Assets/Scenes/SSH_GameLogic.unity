@@ -1872,7 +1872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageTxt: {fileID: 1374768644}
-  prefabOptionUI: {fileID: 4505528730898321632, guid: 535eb19cef890374595555be15126704, type: 3}
+  prefabOptionUI: {fileID: 379992420121238084, guid: 9995de3035dc5a442ad8ca7cdd8214a3, type: 3}
   stageLock: {fileID: 1456240520}
   upButton: {fileID: 967228390}
   downButton: {fileID: 1727680827}

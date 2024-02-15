@@ -165,8 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7a742599f903642988ccae72494ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionPrefab: {fileID: 4505528730898321632, guid: 535eb19cef890374595555be15126704, type: 3}
-  hudCanvas: {fileID: 503265842476703856}
+  optionPrefab: {fileID: 379992420121238084, guid: 9995de3035dc5a442ad8ca7cdd8214a3, type: 3}
 --- !u!1 &3740373798405205779
 GameObject:
   m_ObjectHideFlags: 0
