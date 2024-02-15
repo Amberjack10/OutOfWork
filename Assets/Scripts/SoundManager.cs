@@ -29,12 +29,15 @@ public class SoundManager : MonoBehaviour
         {
             //TODO: SceneTitle input
             case "StartScene": index = 0; break;
-            case "StageScene": index = 1; break;
+            case "SSH_Stage": index = 1; break;
             default: index = 0; break;
         }
 
-        bgmPlayer.clip = bgmClips[index];
-        bgmPlayer.Play();
+        if(bgmPlayer != null)
+        {
+            bgmPlayer.clip = bgmClips[index];
+            bgmPlayer.Play();
+        }
     }
 
     public void PlaySFX(AudioClip _clip)
