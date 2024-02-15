@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 439008149229205640}
   - component: {fileID: 5299345527241940972}
   - component: {fileID: 1699090928078717248}
-  - component: {fileID: 8917184642450960802}
+  - component: {fileID: 634128714510385276}
   m_Layer: 30
   m_Name: Skill
   m_TagString: Untagged
@@ -171,7 +171,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8917184642450960802
+--- !u!114 &634128714510385276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 729449326579179747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5097fec93f6523409d89dd60faa5b90, type: 3}
+  m_Script: {fileID: 11500000, guid: 4710e8282e5f78249bdfafb8bf814281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 27d78d386474e624794fc5aa05eeaf9d, type: 3}

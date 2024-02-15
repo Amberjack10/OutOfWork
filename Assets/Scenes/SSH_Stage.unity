@@ -9895,6 +9895,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkillButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6544528541258777240, guid: 03c19d7f10ba8994da9c4c0a363c31b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544528541258777240, guid: 03c19d7f10ba8994da9c4c0a363c31b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1117755672}
+    - target: {fileID: 6544528541258777240, guid: 03c19d7f10ba8994da9c4c0a363c31b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PressButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544528541258777240, guid: 03c19d7f10ba8994da9c4c0a363c31b7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SkillButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6945925264883307571, guid: 03c19d7f10ba8994da9c4c0a363c31b7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9989,6 +10005,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6945925264883307571, guid: 03c19d7f10ba8994da9c4c0a363c31b7, type: 3}
   m_PrefabInstance: {fileID: 1117755670}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117755672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3372647426021533759, guid: 03c19d7f10ba8994da9c4c0a363c31b7, type: 3}
+  m_PrefabInstance: {fileID: 1117755670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db39c61fee6480a40857040d0850d88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1129483874
 GameObject:
   m_ObjectHideFlags: 0

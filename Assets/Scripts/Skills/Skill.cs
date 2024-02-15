@@ -11,7 +11,7 @@ public class Skill : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        transform.localPosition = new Vector3(-25f, -2.5f, 0);
+        transform.localPosition = new Vector3(-25f, -2f, 0);
     }
     void Start()
     {
