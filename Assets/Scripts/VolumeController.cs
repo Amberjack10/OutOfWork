@@ -12,6 +12,13 @@ public class VolumeController : MonoBehaviour
     [SerializeField] Slider bgmSlider;
     [SerializeField] Slider sfxSlider;
 
+    private void Start()
+    {
+        float volume;
+
+        
+    }
+
     public void VolumeControl(string _type)
     {
         Slider slider;
