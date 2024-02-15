@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,12 +13,15 @@ public enum MonsterType
     Cook_Robot,
     Sweeper_Robot,
     Director_Robot,
+    Attendence_Recoder
 }
 
 public class Stage
 {
     public string Name { get; private set; }
     public int Level { get; private set; }
+
+    public int NowStage { get; private set; }
 
     // Elevator Hp
     public int ElevatorHp { get; private set; }
@@ -30,11 +34,6 @@ public class Stage
     // Stage clear reward. It'll be used for skill upgrades.
     public int Reward { get; private set; }
 
-    public void TakeDamage(int damage)
-    {
-        ElevatorHp -= damage;
-    }
-
     // Temporary constructor. Will revise later.
     public Stage(int stageNumber)
     {
@@ -44,33 +43,38 @@ public class Stage
         switch (stageNumber)
         {
             case 5:
-                ElevatorHp = 100;
+                NowStage = 5;
+                ElevatorHp = 500;
                 generateMonsterRate = 5f;
                 stageMonsters = new MonsterType[] { MonsterType.Patrol_Robot, MonsterType.Guard_Robot };
                 Reward = 30;
                 break;
             case 4:
-                ElevatorHp = 150;
+                NowStage = 4;
+                ElevatorHp = 1000;
                 generateMonsterRate = 4.5f;
                 stageMonsters = new MonsterType[] { MonsterType.Patrol_Robot, MonsterType.Guard_Robot, MonsterType.Cook_Robot };
                 Reward = 40;
                 break;
             case 3:
-                ElevatorHp = 200;
-                generateMonsterRate = 4f;
+                NowStage = 3;
+                ElevatorHp = 1500;
+                generateMonsterRate = 2f;
                 stageMonsters = new MonsterType[] { MonsterType.Guard_Robot, MonsterType.Cook_Robot, MonsterType.Sweeper_Robot };
                 Reward = 50;
                 break;
             case 2:
-                ElevatorHp = 250;
-                generateMonsterRate = 3.5f;
-                stageMonsters = new MonsterType[] { MonsterType.Cook_Robot, MonsterType.Sweeper_Robot, MonsterType.Director_Robot };
+                NowStage = 2;
+                ElevatorHp = 2000;
+                generateMonsterRate = 2f;
+                stageMonsters = new MonsterType[] { MonsterType.Guard_Robot, MonsterType.Cook_Robot, MonsterType.Sweeper_Robot, MonsterType.Director_Robot };
                 Reward = 70;
                 break;
             case 1:
-                ElevatorHp = 300;
-                generateMonsterRate = 3f;
-                stageMonsters = new MonsterType[] { MonsterType.Cook_Robot, MonsterType.Sweeper_Robot, MonsterType.Director_Robot };
+                NowStage = 1;
+                ElevatorHp = 2000;
+                generateMonsterRate = 1.5f;
+                stageMonsters = new MonsterType[] { MonsterType.Guard_Robot, MonsterType.Cook_Robot, MonsterType.Sweeper_Robot, MonsterType.Director_Robot };
                 Reward = 100;
                 break;
         }
@@ -79,17 +83,17 @@ public class Stage
 
 public class StageManager : MonoBehaviour
 {
+    public int temp_Stage;
+
     public Stage[] stages;
     public Stage currentStage;
 
     public event Action<int> OnStageClear;
     public event Action OnStageOver;
+    public event Action<Stage> StartStage; 
 
     [HideInInspector] public Transform EnemyStopPosition;
-
-    public GameObject elevator;
-
-    private Elevator_Door elevatorDoor;
+    [HideInInspector] public Transform ElevatorPosition;
 
     public List<Units> playerUnits;
 
@@ -102,27 +106,25 @@ public class StageManager : MonoBehaviour
         else Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+
+        StageSelect(temp_Stage);
     }
 
     // Start is called before the first frame update
     void Start()
     {
         GameManager.instance.OnStageSelect += StageSelect;
-        elevatorDoor = elevator.GetComponent<Elevator_Door>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void StageSelect(int stageNum)
     {
         currentStage = new Stage(stageNum);
-        elevatorDoor.maxHealth = currentStage.ElevatorHp;
-        elevatorDoor.SetHP();
     }
 
     public void StageClear()
@@ -151,7 +153,7 @@ public class StageManager : MonoBehaviour
     {
         if(scene.buildIndex == 8)
         {
-            Instantiate(elevator);
+            //Instantiate(elevator);
         }
     }
 }
