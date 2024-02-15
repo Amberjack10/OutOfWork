@@ -6,6 +6,6 @@ public class BackButton : MonoBehaviour
 {
     public void OnClickBackButton()
     {
-        LoadingSceneController.LoadScene("StageScene-KSM");
+        LoadingSceneController.LoadScene("SSH_GameLogic");
     }
 }

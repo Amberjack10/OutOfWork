@@ -2131,7 +2131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9a96c3036e8ab49a653437dcaf5a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabOptionUI: {fileID: 4505528730898321632, guid: 535eb19cef890374595555be15126704, type: 3}
+  prefabOptionUI: {fileID: 379992420121238084, guid: 9995de3035dc5a442ad8ca7cdd8214a3, type: 3}
   canvas: {fileID: 550068255}
 --- !u!4 &2111252938
 Transform:
