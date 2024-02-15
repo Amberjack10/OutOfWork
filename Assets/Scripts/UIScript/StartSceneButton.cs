@@ -20,7 +20,8 @@ public class StartSceneButton : MonoBehaviour
     }
     public void OnClickStartBtn()
     {
-        LoadingSceneController.LoadScene("StageScene-KSM");
+        //LoadingSceneController.LoadScene("StageScene-KSM");
+        LoadingSceneController.LoadScene("SSH_GameLogic");
     }
 
     public void ONClickOptionBtn()
