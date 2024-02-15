@@ -16,6 +16,11 @@ public class SoundManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        PlayBGM("StartScene");
+    }
+
     public void PlayBGM(string _scene)
     {
         int index = 0;
@@ -23,7 +28,9 @@ public class SoundManager : MonoBehaviour
         switch (_scene)
         {
             //TODO: SceneTitle input
-            case "StageScene": index = 0; break;
+            case "StartScene": index = 0; break;
+            case "StageScene": index = 1; break;
+            default: index = 0; break;
         }
 
         bgmPlayer.clip = bgmClips[index];
