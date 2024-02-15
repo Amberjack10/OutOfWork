@@ -122,12 +122,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opponentTag: 
   moveDirection: {x: 0, y: 0}
-  state: 0
   health: 100
   walkSpeed: 2
   attack: 5
   attackRate: 3
-  StopPosition: {fileID: 0}
 --- !u!1 &7873275575523956439
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2c4d99de108714a97f7b4cc50f8bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackClip: {fileID: 8300000, guid: 0d83e4ede7573614089dc0752908a20a, type: 3}
   DamageBox: {fileID: 6102507307652413887}
 --- !u!95 &2031825498417530602
 Animator:

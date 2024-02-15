@@ -93,6 +93,8 @@ public class StageManager : MonoBehaviour
     {
         GameManager.instance.OnStageSelect += StageSelect;
         elevatorDoor = elevator.GetComponent<Elevator_Door>();
+        elevatorDoor.maxHealth = currentStage.ElevatorHp;
+        elevatorDoor.SetHP();
     }
 
 
