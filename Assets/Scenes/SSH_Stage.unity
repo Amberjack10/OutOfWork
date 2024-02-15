@@ -15830,6 +15830,7 @@ MonoBehaviour:
   walkSpeed: 3
   attack: 30
   attackRate: 2
+  monsterType: 0
 --- !u!61 &1333974722
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18337,7 +18338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5be7f42e64e0604da86421694827aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 10
+  timeLimit: 180
   elevator: {fileID: 1170165491}
   elevatorDoor: {fileID: 0}
   elevatorHPRate: 0
