@@ -109,7 +109,6 @@ public class StageManager : MonoBehaviour
     {
         GameManager.instance.OnStageSelect += StageSelect;
         elevatorDoor = elevator.GetComponent<Elevator_Door>();
-        EnemyStopPosition = GameObject.Find("enemyUnitStopPosition").GetComponent<Transform>();
     }
 
 
