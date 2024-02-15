@@ -7,19 +7,26 @@ using UnityEngine;
 public class StageController : MonoBehaviour
 {
     public Stage stage;
-    public float timeLimit = 120f;
+    public float timeLimit = 10f;
     private List<Units> playerUnits;
 
     // Player's In-game Unit Cost. Uses to Generate Unit.
+    [Header("Unit Cost")]
     [SerializeField] private int playerUnitCost = 0;
     [SerializeField] private int maxPlayerUnitCost = 100;
     [SerializeField] private float playerUnitCostRate = 2f;
 
     [SerializeField] private Transform playerUnitSpawnPoint;
+    [SerializeField] private Transform enemySpawnPosition;
 
     [Header("UI")]
     [SerializeField] private GameObject uiPrefab;
+    [SerializeField] private GameObject clearPopupPrefab;
     [SerializeField] private TextMeshProUGUI coinText;
+    [SerializeField] private TextMeshProUGUI timer;
+
+    [Header("Enemy Unit")]
+    [SerializeField] private GameObject[] enemyPrefabs;
 
     private GameObject stageUI;
 
@@ -31,10 +38,17 @@ public class StageController : MonoBehaviour
 
         stage = StageManager.instance.currentStage;
         playerUnits = StageManager.instance.playerUnits;
+
         StartRegenPlayerUnitCost();
+
         stageUI = Instantiate(uiPrefab);
+        clearPopupPrefab = Instantiate(clearPopupPrefab);
+
         coinText = stageUI.GetComponentInChildren<TextMeshProUGUI>();
-        InvokeRepeating("MakeMonsters", 0, stage.generateMonsterRate);
+        timer = stageUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        timer.text = $"{((int)timeLimit / 60).ToString():D2}:{((int)timeLimit % 60).ToString("D2")}";
+
+        MakeMonsters(stage.stageMonsters);
     }
 
     // Update is called once per frame
@@ -44,7 +58,12 @@ public class StageController : MonoBehaviour
 
         timeLimit -= Time.deltaTime;
 
-        if (timeLimit <= 0) StageManager.instance.StageOver();
+        timer.text = $"{((int)timeLimit / 60).ToString():D2}:{((int)timeLimit % 60).ToString("D2")}";
+
+        if (timeLimit <= 0)
+        {
+            StageManager.instance.StageOver();
+        }
     }
 
     public void StartRegenPlayerUnitCost()
@@ -75,10 +94,45 @@ public class StageController : MonoBehaviour
         GameObject playerUnit = Instantiate(playerUnits[index].unitPrefab, playerUnitSpawnPoint.position, Quaternion.identity);
     }
 
-    private void MakeMonsters()
+    private void MakeMonsters(MonsterType[] monster)
     {
         // TODO : Generate Monsters
-        Debug.Log("MakingMonsters");
-        GameObject monsterUnit = Instantiate(Resources.Load("EnemyUnit/Director_Robot Variant")) as GameObject;
+
+        float enemySpawnRate;
+
+        foreach(MonsterType monsterType in stage.stageMonsters)
+        {
+            enemySpawnRate = stage.generateMonsterRate;
+            switch (monsterType)
+            {
+                case MonsterType.Patrol_Robot:
+                    enemySpawnRate += 0;
+                    break;
+                case MonsterType.Guard_Robot:
+                    enemySpawnRate += 2;
+                    break;
+                case MonsterType.Cook_Robot:
+                    enemySpawnRate += 3;
+                    break;
+                case MonsterType.Sweeper_Robot:
+                    enemySpawnRate += 5;
+                    break;
+                case MonsterType.Director_Robot:
+                    enemySpawnRate += 7;
+                    break;
+            }
+
+            StartCoroutine(GenerateMonster(enemyPrefabs[(int)monsterType], enemySpawnRate));
+        }
+    }
+
+    IEnumerator GenerateMonster(GameObject monster, float enemySpawnRate)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(enemySpawnRate);
+
+            GameObject monsterPrefab = Instantiate(monster, enemySpawnPosition.position, Quaternion.identity);
+        }
     }
 }
