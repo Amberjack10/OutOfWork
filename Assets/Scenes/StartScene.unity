@@ -713,6 +713,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2132092857}
     m_Modifications:
+    - target: {fileID: 1977469885035151224, guid: 7d0edd0b379c60548813d1af35872517, type: 3}
+      propertyPath: skillPoint
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6373118206725507207, guid: 7d0edd0b379c60548813d1af35872517, type: 3}
       propertyPath: m_Name
       value: SkillManager

@@ -134,21 +134,21 @@ public class StageManager : MonoBehaviour
         Time.timeScale = 0.0f;
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    //private void OnEnable()
+    //{
+    //    SceneManager.sceneLoaded += OnSceneLoaded;
+    //}
 
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    //void OnDisable()
+    //{
+    //    SceneManager.sceneLoaded -= OnSceneLoaded;
+    //}
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if(scene.buildIndex == 8)
-        {
-            //Instantiate(elevator);
-        }
-    }
+    //void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    //{
+    //    if(scene.buildIndex == 8)
+    //    {
+    //        //Instantiate(elevator);
+    //    }
+    //}
 }

@@ -36,10 +36,10 @@ public class ClearPopupUI : MonoBehaviour
         if (StageManager.instance.currentStage.NowStage == 1)
         {
             Debug.Log("ending button");
-            LoadingSceneController.LoadScene("Ending_KSM");
+            LoadingSceneController.LoadScene("Ending");
             return;
         }
-        LoadingSceneController.LoadScene("SSH_GameLogic");
+        LoadingSceneController.LoadScene("SelectStage");
     }
 
     private void StageClear(int reward)

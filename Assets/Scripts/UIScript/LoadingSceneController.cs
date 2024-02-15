@@ -17,7 +17,7 @@ public class LoadingSceneController : MonoBehaviour
     {
         nextScene = sceneName;
         SoundManager.instance.PlayBGM(sceneName);
-        SceneManager.LoadScene("LoadingScene-KSM");
+        SceneManager.LoadScene("LoadingScene");
     }
     // Start is called before the first frame update
     void Start()

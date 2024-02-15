@@ -51,10 +51,16 @@ public class Elevator_Door : MonoBehaviour, IDamageable
 
         animator.SetTrigger("Open");
 
-        while (animator.IsInTransition(0) == false)
+        while (true)
         {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("dead_idle"))
+            {
+                break;
+            }
             yield return new WaitForEndOfFrame();
         }
+
+        Debug.Log("end");
         StageManager.instance.StageClear();
     }
 }

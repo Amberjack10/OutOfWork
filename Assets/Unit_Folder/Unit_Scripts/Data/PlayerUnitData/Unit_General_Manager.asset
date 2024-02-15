@@ -15,4 +15,4 @@ MonoBehaviour:
   unitPrefab: {fileID: 8636708123215643758, guid: aab31ced208f2214598862b7e7f9682a, type: 3}
   unitName: "\uBD80\uC7A5\uB2D8"
   price: 50
-  coolTime: 30
+  coolTime: 25
