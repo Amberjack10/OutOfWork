@@ -15,7 +15,7 @@ public class PlayerUnit : UnitBase
         }
         else
         {
-            if (transform.position.x < StageManager.instance.elevator.transform.position.x)
+            if (transform.position.x < StageManager.instance.ElevatorPosition.position.x)
             {
                 SetState(UnitState.Walking);
             }
@@ -32,7 +32,7 @@ public class PlayerUnit : UnitBase
         }
         else
         {
-            if (transform.position.x >= StageManager.instance.elevator.transform.position.x)
+            if (transform.position.x >= StageManager.instance.ElevatorPosition.position.x)
             {
                 SetState(UnitState.Idle);
             }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +10,12 @@ public class StageController : MonoBehaviour
     public Stage stage;
     public float timeLimit = 10f;
     private List<Units> playerUnits;
+
+    private bool attendence_boss;
+
+    [SerializeField] private GameObject elevator;
+    [SerializeField] private Elevator_Door elevatorDoor;
+    public float elevatorHPRate;
 
     // Player's In-game Unit Cost. Uses to Generate Unit.
     [Header("Unit Cost")]
@@ -35,9 +42,15 @@ public class StageController : MonoBehaviour
     void Start()
     {
         StageManager.instance.EnemyStopPosition = enemyStopPosition;
+        StageManager.instance.ElevatorPosition = elevator.transform;
 
         stage = StageManager.instance.currentStage;
         playerUnits = StageManager.instance.playerUnits;
+
+        elevatorDoor = elevator.GetComponent<Elevator_Door>();
+
+        elevatorDoor.maxHealth = StageManager.instance.currentStage.ElevatorHp;
+        elevatorDoor.SetHP();
 
         StartRegenPlayerUnitCost();
 
@@ -49,11 +62,34 @@ public class StageController : MonoBehaviour
         timer.text = $"{((int)timeLimit / 60).ToString():D2}:{((int)timeLimit % 60).ToString("D2")}";
 
         MakeMonsters(stage.stageMonsters);
+
+        attendence_boss = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        elevatorHPRate = elevatorDoor.HealthRate;
+
+        if (!attendence_boss)
+        {
+            switch (stage.NowStage)
+            {
+                case 5:
+                    if (elevatorHPRate <= 0.8)
+                    {
+                        MakeBoss();
+                    }
+                    break;
+                default:
+                    if (elevatorHPRate <= 0.5)
+                    {
+                        MakeBoss();
+                    }
+                    break;
+            }
+        }
+
         coinText.text = playerUnitCost.ToString();
 
         timeLimit -= Time.deltaTime;
@@ -109,21 +145,27 @@ public class StageController : MonoBehaviour
                     enemySpawnRate += 0;
                     break;
                 case MonsterType.Guard_Robot:
-                    enemySpawnRate += 2;
+                    enemySpawnRate *= (stage.NowStage < 4 ? 10f : 6f);
                     break;
                 case MonsterType.Cook_Robot:
-                    enemySpawnRate += 3;
+                    enemySpawnRate *= (stage.NowStage < 4 ? 2.5f : 4f);
                     break;
                 case MonsterType.Sweeper_Robot:
-                    enemySpawnRate += 5;
+                    enemySpawnRate *= 8f;
                     break;
                 case MonsterType.Director_Robot:
-                    enemySpawnRate += 7;
+                    enemySpawnRate *= 15f;
                     break;
             }
 
             StartCoroutine(GenerateMonster(enemyPrefabs[(int)monsterType], enemySpawnRate));
         }
+    }
+
+    private void MakeBoss()
+    {
+        Instantiate(enemyPrefabs[(int)MonsterType.Attendence_Recoder], enemySpawnPosition.position, Quaternion.identity);
+        attendence_boss = true;
     }
 
     IEnumerator GenerateMonster(GameObject monster, float enemySpawnRate)

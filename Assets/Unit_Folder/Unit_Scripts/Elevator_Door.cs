@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,32 +6,33 @@ using UnityEngine;
 public class Elevator_Door : MonoBehaviour, IDamageable
 {
     public int maxHealth;
-    private int currentHealth;
+    [SerializeField]private int currentHealth;
 
-    [HideInInspector]public bool isDestroyed = false;
+    [HideInInspector]public bool isDestroyed;
 
     protected Animator animator;
 
     public float HealthRate 
     {
-        get { return (float)(currentHealth / maxHealth); } 
+        get { return ((float)currentHealth / (float)maxHealth); } 
     }
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
+        isDestroyed = false;
     }
 
-    private void Start()
-    {
-        currentHealth = maxHealth;
-
-        StageManager.instance.elevator = gameObject;
-    }
 
     public void SetHP()
     {
         currentHealth = maxHealth;
+    }
+
+    public float GetHealthRate()
+    {
+        float healthRate = (float)(currentHealth / maxHealth);
+        return healthRate;
     }
 
     public void TakeDamage(int damage)
