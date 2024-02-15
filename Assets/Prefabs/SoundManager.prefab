@@ -160,7 +160,7 @@ Transform:
   - {fileID: 1904820814499303365}
   - {fileID: 6163423554478285802}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &942343543696988274
 MonoBehaviour:
@@ -177,6 +177,7 @@ MonoBehaviour:
   bgmPlayer: {fileID: 6190549394363532658}
   sfxPlayer: {fileID: 1708078372761447994}
   bgmClips:
+  - {fileID: 8300000, guid: f8bd8df4f0ac6144fbe9008141ac1cc6, type: 3}
   - {fileID: 8300000, guid: 46ab91fdb5ef12942be1a69e93c20180, type: 3}
 --- !u!1 &4566330313548190171
 GameObject:
