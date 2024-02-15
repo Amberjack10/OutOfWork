@@ -30,6 +30,7 @@ public class SoundManager : MonoBehaviour
             //TODO: SceneTitle input
             case "StartScene": index = 0; break;
             case "StageScene": index = 1; break;
+            default: index = 0; break;
         }
 
         bgmPlayer.clip = bgmClips[index];
