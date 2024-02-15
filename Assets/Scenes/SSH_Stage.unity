@@ -16980,6 +16980,7 @@ MonoBehaviour:
   playerUnitCostRate: 2
   playerUnitSpawnPoint: {fileID: 820430807}
   enemySpawnPosition: {fileID: 642340037}
+  enemyStopPosition: {fileID: 1459657949}
   uiPrefab: {fileID: 7383978158193206673, guid: 5366e9403866bd245be7880d35b2323b, type: 3}
   clearPopupPrefab: {fileID: 3622591041208720205, guid: fb0a1ff45f4e1964db24aa7021c24e26, type: 3}
   coinText: {fileID: 0}
