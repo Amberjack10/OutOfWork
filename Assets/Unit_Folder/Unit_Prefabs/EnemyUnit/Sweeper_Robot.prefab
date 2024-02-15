@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ca24a22dff80342b90e3c070db19f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackClip: {fileID: 8300000, guid: 2acd318ca2167ab4fb0457bffb51b478, type: 3}
   bulletSpeed: 3
   bulletDuration: 3
   shootPoint: {fileID: 5617038700487553284}
@@ -371,9 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   opponentTag: 
   moveDirection: {x: 0, y: 0}
-  state: 0
   health: 90
   walkSpeed: 2.5
   attack: 15
   attackRate: 2.5
-  StopPosition: {fileID: 0}

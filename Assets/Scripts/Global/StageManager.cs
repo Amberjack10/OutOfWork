@@ -123,6 +123,7 @@ public class StageManager : MonoBehaviour
     {
         currentStage = new Stage(stageNum);
         elevatorDoor.maxHealth = currentStage.ElevatorHp;
+        elevatorDoor.SetHP();
     }
 
     public void StageClear()
