@@ -3,6 +3,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public enum MonsterType
+{
+    Patrol_Robot,
+    Guard_Robot,
+    Cook_Robot,
+    Sweeper_Robot,
+    Director_Robot,
+}
 
 public class Stage
 {
@@ -15,7 +25,7 @@ public class Stage
     public float generateMonsterRate {  get; private set; }
 
     // TODO : Types of Monster which stage can generate.
-    // public MonsterType[] stageMonsters;
+    public MonsterType[] stageMonsters { get; private set; }
 
     // Stage clear reward. It'll be used for skill upgrades.
     public int Reward { get; private set; }
@@ -36,27 +46,32 @@ public class Stage
             case 5:
                 ElevatorHp = 100;
                 generateMonsterRate = 5f;
-                Reward = 3;
+                stageMonsters = new MonsterType[] { MonsterType.Patrol_Robot, MonsterType.Guard_Robot };
+                Reward = 30;
                 break;
             case 4:
                 ElevatorHp = 150;
                 generateMonsterRate = 4.5f;
-                Reward = 4;
+                stageMonsters = new MonsterType[] { MonsterType.Patrol_Robot, MonsterType.Guard_Robot, MonsterType.Cook_Robot };
+                Reward = 40;
                 break;
             case 3:
                 ElevatorHp = 200;
                 generateMonsterRate = 4f;
-                Reward = 5;
+                stageMonsters = new MonsterType[] { MonsterType.Guard_Robot, MonsterType.Cook_Robot, MonsterType.Sweeper_Robot };
+                Reward = 50;
                 break;
             case 2:
                 ElevatorHp = 250;
                 generateMonsterRate = 3.5f;
-                Reward = 7;
+                stageMonsters = new MonsterType[] { MonsterType.Cook_Robot, MonsterType.Sweeper_Robot, MonsterType.Director_Robot };
+                Reward = 70;
                 break;
             case 1:
                 ElevatorHp = 300;
                 generateMonsterRate = 3f;
-                Reward = 10;
+                stageMonsters = new MonsterType[] { MonsterType.Cook_Robot, MonsterType.Sweeper_Robot, MonsterType.Director_Robot };
+                Reward = 100;
                 break;
         }
     }
@@ -70,7 +85,8 @@ public class StageManager : MonoBehaviour
     public event Action OnStageClear;
     public event Action OnStageOver;
 
-    public Transform EnemyStopPosition;
+    [HideInInspector] public Transform EnemyStopPosition;
+
     public GameObject elevator;
 
     private Elevator_Door elevatorDoor;
@@ -93,8 +109,7 @@ public class StageManager : MonoBehaviour
     {
         GameManager.instance.OnStageSelect += StageSelect;
         elevatorDoor = elevator.GetComponent<Elevator_Door>();
-        elevatorDoor.maxHealth = currentStage.ElevatorHp;
-        elevatorDoor.SetHP();
+        EnemyStopPosition = GameObject.Find("enemyUnitStopPosition").GetComponent<Transform>();
     }
 
 
@@ -107,6 +122,8 @@ public class StageManager : MonoBehaviour
     private void StageSelect(int stageNum)
     {
         currentStage = new Stage(stageNum);
+        elevatorDoor.maxHealth = currentStage.ElevatorHp;
+        elevatorDoor.SetHP();
     }
 
     public void StageClear()
@@ -119,5 +136,21 @@ public class StageManager : MonoBehaviour
         OnStageOver?.Invoke();
     }
 
-    // TODO : Making Stage, Stage Fail
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.buildIndex == 8)
+        {
+            Instantiate(elevator);
+        }
+    }
 }
