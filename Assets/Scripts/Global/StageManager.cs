@@ -83,8 +83,6 @@ public class Stage
 
 public class StageManager : MonoBehaviour
 {
-    public int temp_Stage;
-
     public Stage[] stages;
     public Stage currentStage;
 
@@ -106,8 +104,6 @@ public class StageManager : MonoBehaviour
         else Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
-
-        StageSelect(temp_Stage);
     }
 
     // Start is called before the first frame update
