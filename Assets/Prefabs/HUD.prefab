@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 3651747403471778778}
   - component: {fileID: 7442121621852036900}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1606311908, guid: 7aef72c4015750243882cef0bb463903, type: 3}
+  m_Sprite: {fileID: -1289682303, guid: a5276cdc23b17df48a3f1053fcd61db3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
