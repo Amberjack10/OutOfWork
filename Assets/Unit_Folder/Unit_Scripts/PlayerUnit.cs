@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerUnit : UnitBase
 {
-    public Transform StopPosition;
 
     protected override void UpdatePassive()
     {
@@ -16,7 +15,7 @@ public class PlayerUnit : UnitBase
         }
         else
         {
-            if (transform.position.x < StopPosition.position.x)
+            if (transform.position.x < StageManager.instance.elevator.transform.position.x)
             {
                 SetState(UnitState.Walking);
             }
@@ -33,7 +32,7 @@ public class PlayerUnit : UnitBase
         }
         else
         {
-            if (transform.position.x >= StopPosition.position.x)
+            if (transform.position.x >= StageManager.instance.elevator.transform.position.x)
             {
                 SetState(UnitState.Idle);
             }

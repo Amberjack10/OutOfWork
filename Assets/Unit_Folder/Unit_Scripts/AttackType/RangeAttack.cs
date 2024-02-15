@@ -47,6 +47,7 @@ public class RangeAttack : AttackBase
 
         BulletBase bullet = obj.GetComponent<BulletBase>();
         bullet.InitiateBullet(rangeAttackData);
+        SoundManager.instance.PlaySFX(attackClip);
 
         obj.SetActive(true);
     }

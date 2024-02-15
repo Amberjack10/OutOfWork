@@ -24,6 +24,7 @@ public class MeleeAttack : AttackBase
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(DamageBox.bounds.center, DamageBox.size, 0);
         CallAttackEvent();
+        SoundManager.instance.PlaySFX(attackClip);
 
         foreach (Collider2D collider in colliders)
         {
