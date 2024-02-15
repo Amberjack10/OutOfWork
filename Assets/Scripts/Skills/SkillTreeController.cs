@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SkillTreeController : MonoBehaviour
 {
     [SerializeField] List<GameObject> skillTrees;
+    [SerializeField] List<Animator> linesAnim;
 
     public static SkillTreeController instance;
 
@@ -28,9 +29,15 @@ public class SkillTreeController : MonoBehaviour
             SkillTree prevTree = tree.prevTree;
             Button btn = skillTrees[i].GetComponent<Button>();
 
-            if(!btn.interactable && prevTree.isUnlocked && !tree.isUnlocked)
+            //Debug.Log($"{i}¹ø {!btn.interactable}, {prevTree.isUnlocked}, {!tree.isUnlocked}");
+            if(prevTree.isUnlocked && !tree.isUnlocked)
             {
                 btn.interactable = true;
+                linesAnim[i].SetBool("isInteractable", true);
+            } else
+            {
+                btn.interactable = false;
+                linesAnim[i].SetBool("isInteractable", false);
             }
         }
     }
