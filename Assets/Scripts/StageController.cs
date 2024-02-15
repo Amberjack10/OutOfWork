@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Threading;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class StageController : MonoBehaviour
 {
@@ -116,15 +118,39 @@ public class StageController : MonoBehaviour
         playerUnitCost += 25;
     }
 
+    public void AddCost(int cost)
+    {
+        playerUnitCost += cost;
+    }
+
     // Generate Units.
     public void OnUnitSelectButton(int index)
     {
+        GameObject button = EventSystem.current.currentSelectedGameObject;
         if (playerUnitCost >= playerUnits[index].price)
         {
+            button.GetComponent<Button>().interactable = false;
             MakeUnits(index);
             playerUnitCost = playerUnitCost - playerUnits[index].price > 0 ? playerUnitCost - playerUnits[index].price : 0;
+
+            StartCoroutine(CoolTime(button, playerUnits[index]));
         }
         else return;
+    }
+
+    IEnumerator CoolTime(GameObject button, Units unit)
+    {
+        float cool = unit.coolTime;
+        float maxCool = cool;
+        Image img = button.GetComponentInChildren<Image>();
+        while (cool > 0f)
+        {
+            cool -= Time.deltaTime;
+            img.fillAmount = (cool / maxCool);
+
+            yield return new WaitForFixedUpdate();
+        }
+        button.GetComponent<Button>().interactable = true;
     }
 
     private void MakeUnits(int index)
@@ -154,20 +180,22 @@ public class StageController : MonoBehaviour
                     enemySpawnRate *= (stage.NowStage < 4 ? 2.5f : 4f);
                     break;
                 case MonsterType.Sweeper_Robot:
-                    enemySpawnRate *= 8f;
+                    enemySpawnRate *= 15f;
                     break;
                 case MonsterType.Director_Robot:
                     enemySpawnRate *= 15f;
                     break;
             }
 
-            StartCoroutine(GenerateMonster(enemyPrefabs[(int)monsterType], enemySpawnRate));
+            GameObject enemy = Array.Find(enemyPrefabs, type => type.GetComponent<EnemyUnit>().monsterType == monsterType);
+            StartCoroutine(GenerateMonster(enemy, enemySpawnRate));
         }
     }
 
     private void MakeBoss()
     {
-        Instantiate(enemyPrefabs[(int)MonsterType.Attendence_Recoder], enemySpawnPosition.position, Quaternion.identity);
+        GameObject enemy = Array.Find(enemyPrefabs, type => type.GetComponent<EnemyUnit>().monsterType == MonsterType.Attendence_Recoder);
+        Instantiate(enemy, enemySpawnPosition.position, Quaternion.identity);
         attendence_boss = true;
     }
 

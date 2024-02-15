@@ -9,9 +9,9 @@ using UnityEngine.SceneManagement;
 public enum MonsterType
 {
     Patrol_Robot,
-    Guard_Robot,
     Cook_Robot,
     Sweeper_Robot,
+    Guard_Robot,
     Director_Robot,
     Attendence_Recoder
 }
@@ -52,7 +52,7 @@ public class Stage
             case 4:
                 NowStage = 4;
                 ElevatorHp = 1000;
-                generateMonsterRate = 4.5f;
+                generateMonsterRate = 5f;
                 stageMonsters = new MonsterType[] { MonsterType.Patrol_Robot, MonsterType.Guard_Robot, MonsterType.Cook_Robot };
                 Reward = 40;
                 break;
@@ -88,7 +88,6 @@ public class StageManager : MonoBehaviour
 
     public event Action<int> OnStageClear;
     public event Action OnStageOver;
-    public event Action<Stage> StartStage; 
 
     [HideInInspector] public Transform EnemyStopPosition;
     [HideInInspector] public Transform ElevatorPosition;

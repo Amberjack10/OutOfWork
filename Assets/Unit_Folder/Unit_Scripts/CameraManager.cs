@@ -9,11 +9,6 @@ public class CameraManager : MonoBehaviour
     Vector2 clickPoint;
     float dragSpeed = 30f;
 
-    // Min, Max values about Camera position.x
-    float limitMinX = -28f, limitMaxX = 24f;
-    // Camera Half Width Size
-    float cameraHalfWidth;
-
     public static CameraManager instance;
 
     public Camera cam;
