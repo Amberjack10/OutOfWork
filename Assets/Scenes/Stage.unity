@@ -18388,7 +18388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5be7f42e64e0604da86421694827aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 180
+  timeLimit: 240
   elevator: {fileID: 6793854155182223953}
   elevatorDoor: {fileID: 0}
   elevatorHPRate: 0
@@ -18402,6 +18402,7 @@ MonoBehaviour:
   clearPopupPrefab: {fileID: 1093383582}
   coinText: {fileID: 0}
   timer: {fileID: 0}
+  HpBar: {fileID: 0}
   enemyPrefabs:
   - {fileID: 2052214282363781127, guid: cac293be9eca6cf4db26f54a4d4ff8ec, type: 3}
   - {fileID: 2058114559563473545, guid: a0080c1870927a248a04ceffc8e9a68c, type: 3}

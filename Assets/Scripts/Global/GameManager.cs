@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.DeleteKey("StageCleared");
             stageCleared = PlayerPrefs.GetInt("StageCleared");
         }
-        else stageCleared = 1;
+        else stageCleared = 5;
     }
 
     // Start is called before the first frame update
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         if (index < stageCleared) return;
 
         // Load Stage Scene
-        SceneManager.LoadScene("SSH_Stage");
+        SceneManager.LoadScene("Stage");
         
         selectedStage = index;
         OnStageSelect?.Invoke(index);
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         {
             stageCleared = PlayerPrefs.GetInt("StageCleared");
         }
-        else stageCleared = 1;
+        else stageCleared = 5;
     }
 
     // TODO : Skill point Manage.

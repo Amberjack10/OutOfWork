@@ -102,7 +102,7 @@ public class SelectStage : MonoBehaviour
     {
         // TODO : Give the stage to GameManager
         GameManager.instance.StageSelect(stage);
-        LoadingSceneController.LoadScene("SSH_Stage");
+        LoadingSceneController.LoadScene("Stage");
     }
 
     public void OnClickOptionButton()
@@ -113,6 +113,6 @@ public class SelectStage : MonoBehaviour
 
     public void OnClickSkillUpgradeButton()
     {
-        LoadingSceneController.LoadScene("SSH_SkillTree");
+        LoadingSceneController.LoadScene("SkillTree");
     }
 }

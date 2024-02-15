@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class StageController : MonoBehaviour
 {
     public Stage stage;
-    public float timeLimit = 180f;
+    public float timeLimit = 240f;
     private List<Units> playerUnits;
 
     private bool attendence_boss;
@@ -119,7 +119,7 @@ public class StageController : MonoBehaviour
     public void RegenPlayerUnitCost()
     {
         if (playerUnitCost >= maxPlayerUnitCost) return;
-        playerUnitCost += 25;
+        playerUnitCost += 5;
     }
 
     public void AddCost(int cost)
