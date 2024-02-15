@@ -17,13 +17,14 @@ public class SkillTreeController : MonoBehaviour
 
     void Start()
     {
+        LoadUnlocked();
         UnlockInteract();
     }
 
 
     public void UnlockInteract()
     {
-        for(int i = 0; i < skillTrees.Count; i++)
+        for(int i = 1; i < skillTrees.Count; i++)
         {
             SkillTree tree = skillTrees[i].GetComponent<SkillTree>();
             SkillTree prevTree = tree.prevTree;
@@ -33,12 +34,38 @@ public class SkillTreeController : MonoBehaviour
             if(prevTree.isUnlocked && !tree.isUnlocked)
             {
                 btn.interactable = true;
-                linesAnim[i].SetBool("isInteractable", true);
+                linesAnim[i-1].SetBool("isInteractable", true);
             } else
             {
                 btn.interactable = false;
-                linesAnim[i].SetBool("isInteractable", false);
+                if(tree.isUnlocked)
+                {
+                    Debug.Log($"{i}¹ø {tree.isUnlocked}");
+                    linesAnim[i - 1].SetTrigger("Unlocked");
+                }
             }
+        }
+
+        SaveUnlocked();
+    }
+
+    private void SaveUnlocked()
+    {
+        for(int i = 0; i < skillTrees.Count; i++)
+        {
+            SkillTree tree = skillTrees[i].GetComponent<SkillTree>();
+
+            SkillManager.instance.SaveUnlocked(i, tree.isUnlocked);
+        }
+    }
+
+    private void LoadUnlocked()
+    {
+        for (int i = 0; i < skillTrees.Count; i++)
+        {
+            SkillTree tree = skillTrees[i].GetComponent<SkillTree>();
+
+            tree.isUnlocked = SkillManager.instance.treeUnlocked[i];
         }
     }
 }
