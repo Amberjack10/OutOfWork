@@ -48,10 +48,10 @@ public class Elevator_Door : MonoBehaviour, IDamageable
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
         animator.SetTrigger("Open");
+        StageManager.instance.StageClear();
 
         while (animator.IsInTransition(0) == false)
         {
-            StageManager.instance.StageClear();
             yield return new WaitForEndOfFrame();
         }
 

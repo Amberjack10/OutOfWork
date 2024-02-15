@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
   m_sharedMaterial: {fileID: -3275990344474876961, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
   m_sharedMaterial: {fileID: -3275990344474876961, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
@@ -1180,7 +1180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
   m_sharedMaterial: {fileID: -3275990344474876961, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
@@ -15398,7 +15398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
   m_sharedMaterial: {fileID: -3275990344474876961, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
@@ -15609,7 +15609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
   m_sharedMaterial: {fileID: -3275990344474876961, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
@@ -16550,7 +16550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
   m_sharedMaterial: {fileID: -3275990344474876961, guid: f2afdd93594ab574392cb6ea0ac53a30, type: 2}
@@ -16974,7 +16974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5be7f42e64e0604da86421694827aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 10
+  timeLimit: 180
   playerUnitCost: 0
   maxPlayerUnitCost: 100
   playerUnitCostRate: 2

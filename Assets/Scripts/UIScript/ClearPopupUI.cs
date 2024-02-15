@@ -24,15 +24,18 @@ public class ClearPopupUI : MonoBehaviour
 
     public void OnClickcontinueButton()
     {
-        LoadingSceneController.LoadScene("StageScene-KSM");
+        //LoadingSceneController.LoadScene("StageScene-KSM");
+        Time.timeScale = 1.0f;
+        LoadingSceneController.LoadScene("SSH_GameLogic");
     }
 
-    private void StageClear()
+    private void StageClear(int reward)
     {
         Debug.Log("StageClear");
         this.gameObject.SetActive(true);
         stageText.text = GameManager.instance.selectedStage.ToString();
         headText.text = "Clear!";
+        rewardText.text = reward.ToString();
     }
 
     private void GameOver()

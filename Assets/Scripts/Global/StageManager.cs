@@ -82,7 +82,7 @@ public class StageManager : MonoBehaviour
     public Stage[] stages;
     public Stage currentStage;
 
-    public event Action OnStageClear;
+    public event Action<int> OnStageClear;
     public event Action OnStageOver;
 
     [HideInInspector] public Transform EnemyStopPosition;
@@ -127,12 +127,14 @@ public class StageManager : MonoBehaviour
 
     public void StageClear()
     {
-        OnStageClear?.Invoke();
+        OnStageClear?.Invoke(currentStage.Reward);
+        Time.timeScale = 0.0f;
     }
 
     public void StageOver()
     {
         OnStageOver?.Invoke();
+        Time.timeScale = 0.0f;
     }
 
     private void OnEnable()

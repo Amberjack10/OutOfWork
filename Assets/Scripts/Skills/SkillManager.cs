@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SkillManager : MonoBehaviour
 {
@@ -16,10 +19,17 @@ public class SkillManager : MonoBehaviour
     public GameObject skillSphere;
     [SerializeField] List<GameObject> skills = new List<GameObject>();
 
+    public Button skillButton;
+
     public static SkillManager instance;
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        StageManager.instance.OnStageClear += UpdateSkillPoint;
     }
 
     void Update()
@@ -63,5 +73,30 @@ public class SkillManager : MonoBehaviour
     public void StartSkill(GameObject _go)
     {
         _go.transform.Translate(Vector3.right * 5f * Time.deltaTime);
+    }
+
+    private void UpdateSkillPoint(int _reward)
+    {
+        skillPoint += _reward;
+        Debug.Log(skillPoint);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 7)
+        {
+            skillButton = GameObject.Find("SkillButton").GetComponent<Button>();
+            skillButton.onClick.AddListener(SkillButton);
+        }
     }
 }
