@@ -376,3 +376,4 @@ MonoBehaviour:
   walkSpeed: 2.5
   attack: 15
   attackRate: 2.5
+  monsterType: 2

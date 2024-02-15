@@ -308,6 +308,7 @@ MonoBehaviour:
   walkSpeed: 1.5
   attack: 3
   attackRate: 0
+  monsterType: 3
 --- !u!1 &6577444189230404383
 GameObject:
   m_ObjectHideFlags: 0

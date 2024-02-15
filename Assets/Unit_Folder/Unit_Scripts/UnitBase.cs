@@ -114,7 +114,7 @@ public class UnitBase : MonoBehaviour, IDamageable
     //--------------------------------------------------------------------------------------------------------------------------------------------------
     //Update Function
 
-    protected virtual void Update()
+    protected void Update()
     {
         switch (state)
         {
@@ -128,7 +128,6 @@ public class UnitBase : MonoBehaviour, IDamageable
                 UpdateAttacking();
                 break;
             case UnitState.Dead:
-                StartCoroutine("Die");
                 break;
         }
     }
@@ -192,6 +191,7 @@ public class UnitBase : MonoBehaviour, IDamageable
         if(health <= 0)
         {
             SetState(UnitState.Dead);
+            StartCoroutine("Die");
         }
     }
 
@@ -207,7 +207,13 @@ public class UnitBase : MonoBehaviour, IDamageable
             yield return new WaitForEndOfFrame();
         }
 
+        GetCostOnDie();
         Destroy(gameObject);
+    }
+
+    protected virtual void GetCostOnDie()
+    {
+        
     }
 
     //--------------------------------------------------------------------------------------------------------------------------------------------------
