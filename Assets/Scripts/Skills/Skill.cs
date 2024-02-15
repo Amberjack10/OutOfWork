@@ -15,7 +15,7 @@ public class Skill : MonoBehaviour
     }
     void Start()
     {
-        //transform.localPosition = new Vector3(-25f, -2.5f, 0);
+        
     }
 
     // Update is called once per frame

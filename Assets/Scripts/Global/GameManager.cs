@@ -17,10 +17,22 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if (instance == null)
+        {
             instance = this;
-        else Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("Start");
+        StageManager.instance.OnStageClear += StageClear;
 
         if (PlayerPrefs.HasKey("StageCleared"))
         {
@@ -28,12 +40,6 @@ public class GameManager : MonoBehaviour
             stageCleared = PlayerPrefs.GetInt("StageCleared");
         }
         else stageCleared = 5;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        StageManager.instance.OnStageClear += StageClear;
     }
 
     // Update is called once per frame
@@ -73,13 +79,10 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // StageManager.instance.OnStageClear += StageClear;
         if (PlayerPrefs.HasKey("StageCleared"))
         {
             stageCleared = PlayerPrefs.GetInt("StageCleared");
         }
         else stageCleared = 5;
     }
-
-    // TODO : Skill point Manage.
 }

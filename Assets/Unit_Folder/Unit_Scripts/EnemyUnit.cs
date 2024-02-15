@@ -12,7 +12,6 @@ public class EnemyUnit : UnitBase
 
         StageController stage = GameObject.Find("Stage").GetComponent<StageController>();
 
-        int bonus = (5 - StageManager.instance.currentStage.NowStage) * 10;
         int cost = (((int)monsterType + 1) * 5);
 
         stage.AddCost(cost);

@@ -14,9 +14,7 @@ public class VolumeController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("0¹ø" + masterSlider.value);
         SetVolume();
-        Debug.Log("1¹ø" + masterSlider.value);
     }
 
     public void VolumeControl(string _type)

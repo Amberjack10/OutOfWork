@@ -35,12 +35,6 @@ public class MeleeAttack : AttackBase
         }
     }
 
-    //protected void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawCube(DamageBox.bounds.center, DamageBox.size);
-    //}
-
     protected void EndAttack()
     {
         CallAttackEndEvent();

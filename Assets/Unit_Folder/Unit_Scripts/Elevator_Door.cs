@@ -60,7 +60,6 @@ public class Elevator_Door : MonoBehaviour, IDamageable
             yield return new WaitForEndOfFrame();
         }
 
-        Debug.Log("end");
         StageManager.instance.StageClear();
     }
 }
