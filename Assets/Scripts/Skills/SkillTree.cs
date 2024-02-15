@@ -18,7 +18,7 @@ public class SkillTree : MonoBehaviour
     [SerializeField] private int amount;
     [SerializeField] private int price;
     [SerializeField] TextMeshProUGUI priceTxt;
-    [SerializeField] private SkillTree prevTree;
+    public SkillTree prevTree;
 
     public void CanOpen()
     {
@@ -49,6 +49,7 @@ public class SkillTree : MonoBehaviour
 
         SkillManager.instance.skillPoint -= price;
         isUnlocked = true;
+        SkillTreeController.instance.UnlockInteract();
     }
 
     private bool IsPointEnough()
