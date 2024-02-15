@@ -88,7 +88,6 @@ public class StageManager : MonoBehaviour
 
     public event Action<int> OnStageClear;
     public event Action OnStageOver;
-    public event Action<Stage> StartStage; 
 
     [HideInInspector] public Transform EnemyStopPosition;
     [HideInInspector] public Transform ElevatorPosition;
