@@ -27,7 +27,7 @@ public class Elevator_Door : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
 
-        StageManager.instance.EnemyStopPosition = UnitStopPosition;
+        //StageManager.instance.EnemyStopPosition = UnitStopPosition;
         StageManager.instance.elevator = gameObject;
     }
 
@@ -49,6 +49,7 @@ public class Elevator_Door : MonoBehaviour, IDamageable
 
         while (animator.IsInTransition(0) == false)
         {
+            StageManager.instance.StageClear();
             yield return new WaitForEndOfFrame();
         }
 
