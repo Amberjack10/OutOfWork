@@ -32,7 +32,7 @@ public class ClearPopupUI : MonoBehaviour
     private void StageClear(int reward)
     {
         Debug.Log("StageClear");
-        this.gameObject.SetActive(true);
+        gameObject.SetActive(true);
         stageText.text = GameManager.instance.selectedStage.ToString();
         headText.text = "Clear!";
         rewardText.text = reward.ToString();
@@ -41,7 +41,7 @@ public class ClearPopupUI : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("GameOver");
-        this.gameObject.SetActive(true);
+        gameObject.SetActive(true);
         stageText.text = GameManager.instance.selectedStage.ToString();
         headText.text = "Game Over";
         rewardText.text = "0";

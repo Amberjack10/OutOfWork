@@ -55,7 +55,7 @@ public class StageController : MonoBehaviour
         StartRegenPlayerUnitCost();
 
         stageUI = Instantiate(uiPrefab);
-        clearPopupPrefab = Instantiate(clearPopupPrefab);
+        //clearPopupPrefab = Instantiate(clearPopupPrefab);
 
         coinText = stageUI.GetComponentInChildren<TextMeshProUGUI>();
         timer = stageUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();

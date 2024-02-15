@@ -19,7 +19,7 @@ public class SkillManager : MonoBehaviour
     public GameObject skillSphere;
     [SerializeField] List<GameObject> skills = new List<GameObject>();
 
-    public Button skillButton;
+    //public Button skillButton;
 
     public static SkillManager instance;
     private void Awake()
@@ -81,22 +81,22 @@ public class SkillManager : MonoBehaviour
         Debug.Log(skillPoint);
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    //private void OnEnable()
+    //{
+    //    SceneManager.sceneLoaded += OnSceneLoaded;
+    //}
 
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    //void OnDisable()
+    //{
+    //    SceneManager.sceneLoaded -= OnSceneLoaded;
+    //}
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.buildIndex == 7)
-        {
-            skillButton = GameObject.Find("SkillButton").GetComponent<Button>();
-            skillButton.onClick.AddListener(SkillButton);
-        }
-    }
+    //void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    //{
+    //    if (scene.buildIndex == 7)
+    //    {
+    //        skillButton = GameObject.Find("SkillButton").GetComponent<Button>();
+    //        skillButton.onClick.AddListener(SkillButton);
+    //    }
+    //}
 }
