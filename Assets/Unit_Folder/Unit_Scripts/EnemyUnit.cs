@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyUnit : UnitBase
 {
-    public Transform StopPosition;
 
     protected override void UpdatePassive()
     {

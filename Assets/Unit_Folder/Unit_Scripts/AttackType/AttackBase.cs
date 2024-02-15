@@ -8,6 +8,8 @@ public class AttackBase : MonoBehaviour
     public event Action OnAttackEvent;
     public event Action OnAttackEndEvent;
 
+    public AudioClip attackClip;
+
     public void CallAttackEvent()
     {
         OnAttackEvent?.Invoke();
