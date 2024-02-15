@@ -324,6 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4f6500ec186eb4184304d0f31f6380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackClip: {fileID: 8300000, guid: 50f64e1234b28534e87a504c4e111d35, type: 3}
 --- !u!50 &3260524293564125219
 Rigidbody2D:
   serializedVersion: 4
