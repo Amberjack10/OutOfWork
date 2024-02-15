@@ -71,6 +71,9 @@ public class StageManager : MonoBehaviour
     public event Action OnStageOver;
 
     public Transform EnemyStopPosition;
+    public GameObject elevator;
+
+    private Elevator_Door elevatorDoor;
 
     public List<Units> playerUnits;
 
@@ -89,8 +92,9 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         GameManager.instance.OnStageSelect += StageSelect;
-        EnemyStopPosition.position = new Vector3(-15.49f, -2.55f, 0f);
+        elevatorDoor = elevator.GetComponent<Elevator_Door>();
     }
+
 
     // Update is called once per frame
     void Update()

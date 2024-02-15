@@ -21,6 +21,7 @@ public class LaserAttack : AttackBase
     protected void OnShootLaser()
     {
         CallAttackEvent();
+        SoundManager.instance.PlaySFX(attackClip);
     }
 
     protected void EndAttack()

@@ -6,6 +6,14 @@ using UnityEngine.UIElements;
 
 public class CameraManager : MonoBehaviour
 {
+    Vector2 clickPoint;
+    float dragSpeed = 30f;
+
+    // Min, Max values about Camera position.x
+    float limitMinX = -28f, limitMaxX = 24f;
+    // Camera Half Width Size
+    float cameraHalfWidth;
+
     public static CameraManager instance;
 
     public Camera cam;
@@ -28,24 +36,35 @@ public class CameraManager : MonoBehaviour
         cameraStartPosition = new Vector3(15, 0, cam.transform.position.z);
         cameraSetPosition = new Vector3(-20, 0, cam.transform.position.z);
 
-        mapSize = mapScale.transform.localScale;
+        mapSize = mapScale.GetComponent<TilemapCollider2D>().bounds.size;
         center = mapScale.GetComponent<TilemapCollider2D>().bounds.center;
     }
 
     private void Start()
     {
         StartCoroutine("StartCamera");
+
+        cameraHeight = cam.orthographicSize;
+        cameraWidth = Camera.main.aspect * Camera.main.orthographicSize;
     }
 
-    void LimitCameraArea()
+    void LateUpdate()
     {
-        float lx = mapSize.x - cameraWidth;
-        float clampX = Mathf.Clamp(cam.transform.position.x, -lx + center.x, lx + center.x);
+        // Input.GetMouseButtonDown(1) : On Right Mouse Button Click
+        if (Input.GetMouseButtonDown(1)) clickPoint = Input.mousePosition;
+        // Input.GetMouseButton(1) : While Pressing Right Mouse Button
+        if (Input.GetMouseButton(1) && canMoveCamera)
+        {
+            
+            float lx = (mapSize.x / 2) - cameraWidth;
+            float ly = (mapSize.y / 2) - cameraHeight;
 
-        float ly = mapSize.y - cameraHeight;
-        float clampY = Mathf.Clamp(cam.transform.position.y, -ly + center.y, ly + center.y);
+            Vector3 position = Camera.main.ScreenToViewportPoint((Vector2)Input.mousePosition - clickPoint);
+            Vector3 move = position * (Time.deltaTime * dragSpeed);
 
-        cam.transform.position = new Vector3(clampX, clampY, cam.transform.position.z);
+            cam.transform.Translate(move);
+            cam.transform.position = new Vector3(Mathf.Clamp(cam.transform.position.x, -lx + center.x, lx + center.x), Mathf.Clamp(cam.transform.position.y, -ly + center.y, ly + center.y), cam.transform.position.z);
+        }
     }
 
     IEnumerator StartCamera()
