@@ -31,7 +31,7 @@ public class ClearPopupUI : MonoBehaviour
     {
         Time.timeScale = 1.0f;
 
-        if (StageManager.instance.currentStage.NowStage == 1)
+        if (StageManager.instance.currentStage.NowStage == 1 && GameManager.instance.stageCleared < 1)
         {
             LoadingSceneController.LoadScene("Ending");
             return;

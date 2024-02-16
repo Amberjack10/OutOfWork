@@ -31,8 +31,7 @@ public class SoundManager : MonoBehaviour
 
         switch (_scene)
         {
-            case "StartScene": index = 0; break;
-            case "SSH_Stage": index = 1; break;
+            case "Stage": index = 1; break;
             default: index = 0; break;
         }
 
