@@ -25,7 +25,11 @@ public class SkillManager : MonoBehaviour
     public static SkillManager instance;
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else Destroy(gameObject);
     }
 
     private void Start()
@@ -79,7 +83,6 @@ public class SkillManager : MonoBehaviour
     private void UpdateSkillPoint(int _reward)
     {
         skillPoint += _reward;
-        Debug.Log(skillPoint);
     }
 
     public void SaveUnlocked(int _index, bool _isUnlocked)

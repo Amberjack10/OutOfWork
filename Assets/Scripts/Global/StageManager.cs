@@ -133,22 +133,4 @@ public class StageManager : MonoBehaviour
         OnStageOver?.Invoke();
         Time.timeScale = 0.0f;
     }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if(scene.buildIndex == 8)
-        {
-            //Instantiate(elevator);
-        }
-    }
 }

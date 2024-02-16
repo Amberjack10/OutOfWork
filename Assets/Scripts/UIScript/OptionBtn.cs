@@ -12,7 +12,7 @@ public class OptionBtn : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "SSH_StartScene")
+        if (SceneManager.GetActiveScene().name == "StartScene")
         {
             backButtonObject.SetActive(false);
             exitButtonObject.SetActive(false);
@@ -33,12 +33,12 @@ public class OptionBtn : MonoBehaviour
     public void OnClickOptionBackButton()
     {
         Time.timeScale = 1f;
-        if(SceneManager.GetActiveScene().name == "SSH_GameLogic")
+        if(SceneManager.GetActiveScene().name == "SelectStage")
         {
-            LoadingSceneController.LoadScene("SSH_StartScene");
+            LoadingSceneController.LoadScene("StartScene");
         }
         else
-            LoadingSceneController.LoadScene("SSH_GameLogic");
+            LoadingSceneController.LoadScene("SelectStage");
     }
 
     public void OnClickOptionExitButton()

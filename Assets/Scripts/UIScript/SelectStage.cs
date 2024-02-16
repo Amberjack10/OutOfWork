@@ -21,17 +21,13 @@ public class SelectStage : MonoBehaviour
     [SerializeField] private Canvas canvas;
 
     private int stage = 5;
-    private bool isClear; // TODO : Check isClear in GameManager
 
     private GameObject optionUI;
     
     private void Start()
     {
         stageTxt.text = stage.ToString();
-        //if(isClear)
-        //{
-        //    stageLock.SetActive(false);
-        //}
+
         if (GameManager.instance.stageCleared < int.Parse(stageTxt.text))
         {
             stageLock.SetActive(false);
@@ -100,9 +96,8 @@ public class SelectStage : MonoBehaviour
 
     public void OnStageSelectButton()
     {
-        // TODO : Give the stage to GameManager
         GameManager.instance.StageSelect(stage);
-        LoadingSceneController.LoadScene("SSH_Stage");
+        LoadingSceneController.LoadScene("Stage");
     }
 
     public void OnClickOptionButton()
@@ -113,6 +108,6 @@ public class SelectStage : MonoBehaviour
 
     public void OnClickSkillUpgradeButton()
     {
-        LoadingSceneController.LoadScene("SSH_SkillTree");
+        LoadingSceneController.LoadScene("SkillTree");
     }
 }

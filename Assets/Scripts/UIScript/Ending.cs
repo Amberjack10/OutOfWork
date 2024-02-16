@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class Ending : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-
     [SerializeField] private float moveSpeed;
     [SerializeField] private TextMeshProUGUI[] titleText;
     [SerializeField] private TextMeshProUGUI bodyText;

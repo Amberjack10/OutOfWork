@@ -11,7 +11,6 @@ public class ClearPopupUI : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Popup Start");
         gameObject.SetActive(false);
         StageManager.instance.OnStageClear += StageClear;
         StageManager.instance.OnStageOver += GameOver;
@@ -30,14 +29,18 @@ public class ClearPopupUI : MonoBehaviour
 
     public void OnClickcontinueButton()
     {
-        //LoadingSceneController.LoadScene("StageScene-KSM");
         Time.timeScale = 1.0f;
-        LoadingSceneController.LoadScene("SSH_GameLogic");
+
+        if (StageManager.instance.currentStage.NowStage == 1)
+        {
+            LoadingSceneController.LoadScene("Ending");
+            return;
+        }
+        LoadingSceneController.LoadScene("SelectStage");
     }
 
     private void StageClear(int reward)
     {
-        Debug.Log("StageClear");
         gameObject.SetActive(true);
         stageText.text = GameManager.instance.selectedStage.ToString();
         headText.text = "Clear!";
@@ -46,7 +49,6 @@ public class ClearPopupUI : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("GameOver");
         gameObject.SetActive(true);
         stageText.text = GameManager.instance.selectedStage.ToString();
         headText.text = "Game Over";

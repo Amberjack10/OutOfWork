@@ -6,33 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/StartScene-KSM.unity
-    guid: 5e4655c4486832d4e9ec980a018c0257
-  - enabled: 1
-    path: Assets/Scenes/LoadingScene-KSM.unity
-    guid: 683c66139760f544884ea1104f45ee76
-  - enabled: 1
-    path: Assets/Scenes/StageScene-KSM.unity
-    guid: fd6c19fab08877d47ab2bf933f5f75cf
-  - enabled: 1
-    path: Assets/Scenes/KYW_SkillTree.unity
-    guid: bd830e971f0c0c640bfedcc76775fdd9
-  - enabled: 1
-    path: Assets/Scenes/SSH_StartScene.unity
+    path: Assets/Scenes/StartScene.unity
     guid: 600918ce39dd4dd40bc3480761d44b35
   - enabled: 1
-    path: Assets/Scenes/SSH_GameLogic.unity
+    path: Assets/Scenes/SelectStage.unity
     guid: ee6e2dacf01d86842832bcd0e65e9b31
   - enabled: 1
-    path: Assets/Scenes/SSH_SkillTree.unity
-    guid: 060c4b484ca68d942afdb9265a596a87
-  - enabled: 1
-    path: Assets/Scenes/SSH_Stage.unity
+    path: Assets/Scenes/Stage.unity
     guid: 5605d157f664523448b2ff870644df61
   - enabled: 1
-    path: Assets/Scenes/KSM_Stage.unity
-    guid: c14a123f74b12334790ea676b49da66c
+    path: Assets/Scenes/SkillTree.unity
+    guid: 060c4b484ca68d942afdb9265a596a87
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 683c66139760f544884ea1104f45ee76
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: d78446d1e0ea23147a72f2d58c2b58c6
   m_configObjects: {}

@@ -45,9 +45,7 @@ public class CameraManager : MonoBehaviour
 
     void LateUpdate()
     {
-        // Input.GetMouseButtonDown(1) : On Right Mouse Button Click
         if (Input.GetMouseButtonDown(1)) clickPoint = Input.mousePosition;
-        // Input.GetMouseButton(1) : While Pressing Right Mouse Button
         if (Input.GetMouseButton(1) && canMoveCamera)
         {
             
