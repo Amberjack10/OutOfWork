@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.DeleteKey("StageCleared");
             stageCleared = PlayerPrefs.GetInt("StageCleared");
+            
+            if(stageCleared <= 0)
+            {
+                stageCleared = 0;
+                PlayerPrefs.SetInt("StageCleared", 0);
+            }
         }
         else stageCleared = 5;
     }
@@ -64,7 +70,9 @@ public class GameManager : MonoBehaviour
     private void StageClear(int reward)
     {
         stageCleared--;
-        PlayerPrefs.SetInt("StageCleared", stageCleared);
+        if (stageCleared > 0)
+            PlayerPrefs.SetInt("StageCleared", stageCleared);
+        else stageCleared = 0;
     }
 
     private void OnEnable()
@@ -82,6 +90,12 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.HasKey("StageCleared"))
         {
             stageCleared = PlayerPrefs.GetInt("StageCleared");
+
+            if (stageCleared <= 0)
+            {
+                stageCleared = 0;
+                PlayerPrefs.SetInt("StageCleared", 0);
+            }
         }
         else stageCleared = 5;
     }
